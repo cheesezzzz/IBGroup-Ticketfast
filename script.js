@@ -1,30 +1,24 @@
 const btnHamburger = document.querySelector('#hamburger-btn')
-const menuSlider = documemt.querySelector('')
+const btnCloseMenu = document.querySelector('#menuClose')
+const menuSlider = document.querySelector('#menu-slider')
+const body = document.querySelector('#body')
 
 // !Menu Navigation
-let isMenuOpen = false;
-
 // Displaying Menu Navigation function
 const showNavigation = function () {
-  menuNavigation.classList.toggle("opacity-0");
-  menuNavigation.classList.toggle("opacity-100");
-  menuNavigation.classList.toggle("invisible");
+  menuSlider.classList.toggle('-translate-x-full')
   body.classList.toggle("overflow-hidden");
 };
 
 btnHamburger.addEventListener("click", function () {
-  // Animated Hamburger
-  isMenuOpen = !isMenuOpen;
-  if (isMenuOpen) {
-    btnHamburger.classList.add("open");
-  } else {
-    btnHamburger.classList.remove("open");
-  }
-
   // Displaying the Menu Navigation
-  if (menuNavigation.classList.contains("opacity-0")) {
+  if (menuSlider.classList.contains("-translate-x-full")) {
     showNavigation();
   } else {
     showNavigation();
   }
 });
+
+btnCloseMenu.addEventListener('click', () => {
+  showNavigation();
+})

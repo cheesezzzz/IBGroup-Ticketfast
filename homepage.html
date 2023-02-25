@@ -6,7 +6,7 @@
     <link href="./dist/output.css" rel="stylesheet" />
     <script defer src="script.js"></script>
   </head>
-  <body class="m-0 p-0 font-inter tracking-tight">
+  <body id="body" class="m-0 p-0 font-inter tracking-tight">
     <!-- !Announcement Header -->
     <header
       class="w-full h-12 bg-accent-400 px-20 py-8 flex-col lg:flex-row flex justify-center items-center space-y-1 space-x-2 lg:space-y-0"
@@ -24,23 +24,15 @@
 
     <!-- !Navigation Bar -->
     <nav
-      class="w-full h-20 bg-secondary-100 shadow-md flex items-center justify-between px-20 space-x-10"
+      class="w-full h-fit py-5 bg-secondary-100 shadow-md flex items-center justify-between px-20 space-x-10"
     >
       <!-- !Hamburger Button -->
-      <div class="md:hidden">
+      <div class="md:hidden rounded-full w-12 h-12 hover:bg-secondary-200 flex justify-center items-center">
         <button
           id="hamburger-btn"
-          class="flex cursor-pointer relative items-center transition duration-500 ease-in-out w-10 h-7"
+          class="flex cursor-pointer relative justify-center items-center"
         >
-          <div
-            class="line-1 absolute hamburger-0 w-8 h-[0.16rem] bg-primary-300 transition rounded-full duration-200 -translate-y-2"
-          ></div>
-          <div
-            class="absolute hamburger w-8 h-[0.16rem] bg-primary-300 transition rounded-full duration-200"
-          ></div>
-          <div
-            class="absolute hamburger-2 w-8 h-[0.16rem] bg-primary-300 transform transition-transform rounded-full duration-200 translate-y-2"
-          ></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="currentColor" d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"/></svg>
         </button>
       </div>
       <!-- !Logo -->
@@ -104,21 +96,18 @@
       </form>
 
       <!-- !Register and Sign up Buttons -->
-      <div class="hidden lg:flex items-center space-x-2">
+      <div class="lg:flex items-center space-x-2">
         <button
-          class="bg-transparent border-2 border-primary-300 text-primary-300 text-center rounded-lg w-28 h-10 font-medium hover:bg-black hover:text-secondary-100 duration-150 ease-in-out"
+          class="bg-transparent border-2 border-primary-300 text-primary-300 text-center rounded-lg w-28 h-10 font-medium hover:bg-black hover:text-secondary-100 duration-150 ease-in-out hidden lg:block"
         >
           Đăng nhập
         </button>
         <button
-          class="bg-black text-secondary-100 text-center rounded-lg w-24 h-10 font-medium hover:bg-secondary-100 hover:bg-transparent hover:border-2 hover:border-primary-300 hover:text-primary-300 duration-150 ease-in-out"
+          class="bg-black text-secondary-100 text-center rounded-lg w-24 h-10 font-medium hover:bg-secondary-100 hover:bg-transparent hover:border-2 hover:border-primary-300 hover:text-primary-300 duration-150 ease-in-out hidden lg:block"
         >
           Đăng ký
         </button>
-      </div>
-
-      <!-- !Profile Icon -->
-      <button
+        <button
         class="p-2 bg-secondary-200 flex justify-center items-center rounded-lg lg:hidden"
       >
         <svg
@@ -134,11 +123,20 @@
           />
         </svg>
       </button>
+      </div>      
     </nav>
 
     <!-- !Menu Navigation Slider -->
-    <div class="absolute h-screen bg-secondary-200 w-96 top-0 left-0 z-50 hidden">
+    <div id="menu-slider" class="absolute h-screen bg-secondary-200 w-96 top-0 left-0 z-50 -translate-x-full duration-300 ease-in-out">
+      <button id="menuClose" class="absolute -top-0 right-0">
+        <svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.25" d="m8.464 15.535l7.072-7.07m-7.072 0l7.072 7.07"/></svg>
+      </button>
+      <div>
 
+      </div>
+      <div>
+
+      </div>
     </div>
 
     <!-- !Hero Section -->
