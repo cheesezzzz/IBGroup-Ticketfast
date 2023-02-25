@@ -666,6 +666,30 @@ video {
   left: -0px;
 }
 
+.-top-1{
+  top: -0.25rem;
+}
+
+.top-1{
+  top: 0.25rem;
+}
+
+.top-2{
+  top: 0.5rem;
+}
+
+.top-4{
+  top: 1rem;
+}
+
+.right-1{
+  right: 0.25rem;
+}
+
+.right-2{
+  right: 0.5rem;
+}
+
 .isolate{
   isolation: isolate;
 }
@@ -774,6 +798,10 @@ video {
 
 .mt-8{
   margin-top: 2rem;
+}
+
+.mb-20{
+  margin-bottom: 5rem;
 }
 
 .box-border{
@@ -925,6 +953,18 @@ video {
   height: fit-content;
 }
 
+.h-14{
+  height: 3.5rem;
+}
+
+.h-16{
+  height: 4rem;
+}
+
+.h-24{
+  height: 6rem;
+}
+
 .min-h-fit{
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -1000,6 +1040,18 @@ video {
 
 .w-12{
   width: 3rem;
+}
+
+.w-14{
+  width: 3.5rem;
+}
+
+.w-16{
+  width: 4rem;
+}
+
+.w-1{
+  width: 0.25rem;
 }
 
 .min-w-full{
@@ -2022,6 +2074,11 @@ video {
   border-color: rgb(199 199 199 / var(--tw-border-opacity));
 }
 
+.border-b-red-900{
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(127 29 29 / var(--tw-border-opacity));
+}
+
 .bg-\[rgb\(255\2c 0\2c 0\)\]{
   --tw-bg-opacity: 1;
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
@@ -2272,6 +2329,16 @@ video {
   padding-bottom: 1.25rem;
 }
 
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -2367,6 +2434,11 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.text-base{
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .font-bold{
@@ -2985,6 +3057,16 @@ video {
   background-color: transparent;
 }
 
+.hover\:bg-secondary-250:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 236 238 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-accent-200:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(153 196 85 / var(--tw-bg-opacity));
+}
+
 .hover\:font-bold:hover{
   font-weight: 700;
 }
@@ -3087,6 +3169,11 @@ video {
 
   .lg\:hidden{
     display: none;
+  }
+
+  .lg\:-translate-x-full{
+    --tw-translate-x: -100%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .lg\:grid-cols-3{
