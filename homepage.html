@@ -141,9 +141,9 @@
     <!-- !Menu Navigation Slider -->
     <div
       id="menu-slider"
-      class="absolute h-screen bg-secondary-100 w-96 top-0 left-0 z-50 -translate-x-fu duration-300 ease-in-out px-5"
+      class="absolute h-fit drop-shadow-lg bg-secondary-100 w-96 top-0 left-0 z-50 -translate-x-ful duration-300 ease-in-out px-5 pb-10"
     >
-      <div class="flex items-center h-24 relative border-b mb-20">
+      <div class="flex items-center h-24 relative border-b mb-12">
         <button
           id="menuClose"
           class="absolute top-4 right-0 hover:bg-secondary-200 rounded-full"
@@ -165,59 +165,109 @@
         </button>
       </div>
 
-      <div>
-        <button
-          class="border h-20 w-full hover:bg-secondary-200 flex justify-between items-center px-2"
-        >
-          <div>
-            <h2>Âm nhạc</h2>
+      <!-- !Accordion Wrapper -->
+      <div class="space-y-5">
+        <!-- !Accordion #1 -->
+        <div>
+          <button
+            class=" h-20 w-full hover:bg-secondary-200 duration-200 ease-linear flex justify-between items-center px-2"
+          >
+            <div>
+              <h2>Âm nhạc</h2>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g transform="rotate(-90 12 12)">
+                  <path
+                    fill="currentColor"
+                    d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <div class="bg-secondary-200 flex flex-col space-y-3 py-3 pl-2">
+            <a href="">Legend Concert</a>
+            <a href="">Chuyen Tinh</a>
+            <a href="">Dem Tinh Nhan</a>
+            <a href="">Livestorm</a>
+            <a href="">Bang Kieu</a>
           </div>
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g transform="rotate(-90 12 12)">
-                <path
-                  fill="currentColor"
-                  d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
-                />
-              </g>
-            </svg>
+        </div>
+  
+        <!-- !Accordion #2 -->
+        <div>
+          <button
+            class=" h-20 w-full hover:bg-secondary-200 duration-200 ease-linear flex justify-between items-center px-2"
+          >
+            <div>
+              <h2>Truyền hình</h2>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g transform="rotate(-90 12 12)">
+                  <path
+                    fill="currentColor"
+                    d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <div class="bg-secondary-200 flex flex-col space-y-3 py-3 pl-2">
+            <a href="">Legend Concert</a>
+            <a href="">Chuyen Tinh</a>
+            <a href="">Dem Tinh Nhan</a>
+            <a href="">Livestorm</a>
+            <a href="">Bang Kieu</a>
           </div>
-        </button>
-        <div></div>
+        </div>
+  
+        <!-- !Accordion #3 -->
+        <div>
+          <button
+            class=" h-20 w-full hover:bg-secondary-200 duration-200 ease-linear flex justify-between items-center px-2"
+          >
+            <div>
+              <h2>Sự Kiện</h2>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+              >
+                <g transform="rotate(-90 12 12)">
+                  <path
+                    fill="currentColor"
+                    d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <div class="bg-secondary-200 flex flex-col space-y-3 py-3 pl-2">
+            <a href="">Legend Concert</a>
+            <a href="">Chuyen Tinh</a>
+            <a href="">Dem Tinh Nhan</a>
+            <a href="">Livestorm</a>
+            <a href="">Bang Kieu</a>
+          </div>
+        </div>
       </div>
-
-      <div>
-        <button
-          class="border h-20 w-full hover:bg-secondary-200 flex justify-between items-center px-2"
-        >
-          <div>
-            <h2>Âm nhạc</h2>
-          </div>
-          <div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="1em"
-              height="1em"
-              viewBox="0 0 24 24"
-            >
-              <g transform="rotate(-90 12 12)">
-                <path
-                  fill="currentColor"
-                  d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
-                />
-              </g>
-            </svg>
-          </div>
-        </button>
-        <div></div>
       </div>
-    </div>
-
+      
     <!-- !Hero Section -->
     <section
       class="bg-gradient-to-r from-primary-200 w-full h-[75vh] relative overflow-hidden flex items-center"
@@ -245,7 +295,7 @@
       </div>
     </section>
 
-    <!-- !Content -->
+    <!-- !Content Wrapper -->
     <main class="p-16">
       <div class="mb-10 text-4xl">
         <h2 class="font-bold">Sự kiện đặc sắc</h2>
