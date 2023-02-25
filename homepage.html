@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <script defer src="script.js"></script>
+  </head>
+  <body class="m-0 p-0 font-inter tracking-tight">
+    <!-- !Announcement Header -->
+    <header
+      class="w-full h-12 bg-accent-400 px-20 py-8 flex-col lg:flex-row flex justify-center items-center space-y-1 space-x-2 lg:space-y-0"
+    >
+      <p
+        class="text-secondary-250 text-center font-light text-xs md:text-sm lg:text-base"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
+        autem accusantium. Quae soluta saepe.
+      </p>
+      <button class="bg-primary-200 text-secondary-100 w-7 h-7 rounded-full">
+        <p class="font-extralight text-sm">X</p>
+      </button>
+    </header>
+
+    <!-- !Navigation Bar -->
+    <nav
+      class="w-full h-20 bg-secondary-100 shadow-md flex items-center justify-between px-20 space-x-10"
+    >
+      <!-- !Hamburger Button -->
+      <div class="md:hidden">
+        <button
+          id="hamburger-btn"
+          class="flex cursor-pointer relative items-center transition duration-500 ease-in-out w-10 h-7"
+        >
+          <div
+            class="line-1 absolute hamburger-0 w-8 h-[0.16rem] bg-primary-300 transition rounded-full duration-200 -translate-y-2"
+          ></div>
+          <div
+            class="absolute hamburger w-8 h-[0.16rem] bg-primary-300 transition rounded-full duration-200"
+          ></div>
+          <div
+            class="absolute hamburger-2 w-8 h-[0.16rem] bg-primary-300 transform transition-transform rounded-full duration-200 translate-y-2"
+          ></div>
+        </button>
+      </div>
+      <!-- !Logo -->
+      <div>
+        <a href="#">
+          <h1 class="font-extrabold tracking-tighter text-2xl">Ticketfast</h1>
+        </a>
+      </div>
+
+      <!-- !Search Bar -->
+      <form class="w-[40rem] hidden md:block">
+        <div class="flex">
+          <button
+            class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-primary-100 bg-secondary-250 rounded-l-lg hover:bg-secondary-300 ease-linear duration-100"
+            type="button"
+          >
+            Âm nhạc
+            <svg
+              aria-hidden="true"
+              class="w-4 h-4 ml-1"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <div class="relative w-full">
+            <input
+              type="search"
+              class="block p-3 w-full z-20 text-sm text-secondary-100 bg-secondary-200 rounded-r-lg border-secondary-300 border-l-2"
+              placeholder="Tìm kiếm"
+              required
+            />
+            <button
+              type="submit"
+              class="absolute top-0 right-0 p-3 text-sm font-medium text-white bg-transparent rounded-r-lg hover:bg-secondary-200 focus:ring-4 focus:outline-none"
+            >
+              <svg
+                aria-hidden="true"
+                class="w-5 h-5"
+                fill="none"
+                stroke="#000"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- !Register and Sign up Buttons -->
+      <div class="hidden lg:flex items-center space-x-2">
+        <button
+          class="bg-transparent border-2 border-primary-300 text-primary-300 text-center rounded-lg w-28 h-10 font-medium hover:bg-black hover:text-secondary-100 duration-150 ease-in-out"
+        >
+          Đăng nhập
+        </button>
+        <button
+          class="bg-black text-secondary-100 text-center rounded-lg w-24 h-10 font-medium hover:bg-secondary-100 hover:bg-transparent hover:border-2 hover:border-primary-300 hover:text-primary-300 duration-150 ease-in-out"
+        >
+          Đăng ký
+        </button>
+      </div>
+
+      <!-- !Profile Icon -->
+      <button
+        class="p-2 bg-secondary-200 flex justify-center items-center rounded-lg lg:hidden"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.8313 12.6049C17.3081 13.303 18.5673 14.3894 19.4741 15.7481C20.381 17.1067 20.9012 18.6863 20.9793 20.3179C20.9896 20.4674 20.97 20.6174 20.9215 20.7592C20.873 20.901 20.7967 21.0316 20.6971 21.1435C20.5974 21.2554 20.4764 21.3462 20.3412 21.4107C20.2059 21.4752 20.0592 21.512 19.9095 21.519C19.7599 21.526 19.6103 21.503 19.4696 21.4514C19.329 21.3998 19.2 21.3207 19.0904 21.2186C18.9807 21.1165 18.8926 20.9935 18.8311 20.8569C18.7696 20.7202 18.736 20.5727 18.7323 20.4229C18.6506 18.6897 17.9045 17.0546 16.649 15.8569C15.3935 14.6592 13.725 13.991 11.9898 13.991C10.2547 13.991 8.5862 14.6592 7.3307 15.8569C6.07519 17.0546 5.32911 18.6897 5.24734 20.4229C5.22714 20.7163 5.09286 20.9901 4.87327 21.1857C4.65368 21.3813 4.36624 21.4831 4.07249 21.4694C3.77874 21.4557 3.50204 21.3275 3.30165 21.1122C3.10126 20.897 2.9931 20.6119 3.00034 20.3179C3.07813 18.6864 3.59814 17.1068 4.50469 15.7482C5.41125 14.3896 6.67022 13.303 8.14684 12.6049C7.20036 11.8155 6.52004 10.7536 6.19842 9.56378C5.8768 8.37397 5.9295 7.11397 6.34934 5.95517C6.76918 4.79637 7.53579 3.79503 8.54489 3.08734C9.55398 2.37966 10.7566 2 11.9891 2C13.2216 2 14.4242 2.37966 15.4333 3.08734C16.4424 3.79503 17.209 4.79637 17.6288 5.95517C18.0487 7.11397 18.1014 8.37397 17.7798 9.56378C17.4581 10.7536 16.7778 11.8155 15.8313 12.6049ZM15.7398 7.99542C15.7398 7.00086 15.3448 6.04703 14.6415 5.34377C13.9382 4.64051 12.9844 4.24542 11.9898 4.24542C10.9953 4.24542 10.0415 4.64051 9.33819 5.34377C8.63493 6.04703 8.23984 7.00086 8.23984 7.99542C8.23984 8.98998 8.63493 9.94381 9.33819 10.6471C10.0415 11.3503 10.9953 11.7454 11.9898 11.7454C12.9844 11.7454 13.9382 11.3503 14.6415 10.6471C15.3448 9.94381 15.7398 8.98998 15.7398 7.99542Z"
+            fill="black"
+          />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- !Menu Navigation Slider -->
+    <div class="absolute h-screen bg-secondary-200 w-96 top-0 left-0 z-50 hidden">
+
+    </div>
+
+    <!-- !Hero Section -->
+    <section
+      class="bg-gradient-to-r from-primary-200 w-full h-[75vh] relative overflow-hidden flex items-center"
+    >
+      <img
+        class="absolute top-0 left-0 min-w-full min-h-fit -z-10"
+        src="https://images.unsplash.com/photo-1541473211644-5cb06d3c68ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+        alt="artist"
+      />
+      <div class="mx-20 max-w-3xl space-y-6">
+        <div class="space-y-3">
+          <h1 class="text-4xl text-secondary-100 font-semibold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </h1>
+          <p class="text-secondary-300 font-light max-w-xl">
+            Vel nobis sequi tenetur? Voluptatem placeat tenetur corporis quo
+            dignissimos esse, tempora perspiciatis dolorum sint qui.
+          </p>
+        </div>
+        <button
+          class="rounded-full bg-accent-300 w-36 h-12 text-secondary-250 font-semibold hover:bg-accent-400 ease-linear duration-100"
+        >
+          Mua vé
+        </button>
+      </div>
+    </section>
+
+    <!-- !Content -->
+    <main class="p-16">
+      <div class="mb-10 text-4xl">
+        <h2 class="font-bold">Sự kiện đặc sắc</h2>
+        <p class="w-24 h-2 mt-3 bg-accent-200 rounded-full"></p>
+      </div>
+
+      <!-- !Cards -->
+      <section class="grid grid-cols-2 gap-x-12 gap-y-16 border-b pb-20">
+        <div class="flex-col cursor-pointer">
+          <img
+            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+            alt=""
+          />
+
+          <div class="mt-8 space-y-2">
+            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+            <h2 class="text-primary-200 font-bold text-2xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </h2>
+          </div>
+        </div>
+        <div class="flex-col cursor-pointer">
+          <img
+            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+            alt=""
+          />
+          <div class="mt-8 space-y-2">
+            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+            <h2 class="text-primary-200 font-bold text-2xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </h2>
+          </div>
+        </div>
+        <div class="flex-col cursor-pointer">
+          <img
+            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+            alt=""
+          />
+          <div class="mt-8 space-y-2">
+            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+            <h2 class="text-primary-200 font-bold text-2xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </h2>
+          </div>
+        </div>
+        <div class="flex-col cursor-pointer">
+          <img
+            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+            alt=""
+          />
+          <div class="mt-8 space-y-2">
+            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+            <h2 class="text-primary-200 font-bold text-2xl">
+              Lorem ipsum dolor sit amet consectetur adipisicing.
+            </h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- !Popular Section -->
+
+      <!-- !Heading -->
+      <div class="mb-10 text-4xl mt-12">
+        <h2 class="font-bold">Nổi bật</h2>
+        <p class="w-24 h-2 mt-3 bg-accent-200 rounded-full"></p>
+      </div>
+
+      <!-- !Horizontal Scrolling Section -->
+      <div class="flex flex-col bg-white">
+        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+          <div class="flex">
+            <div class="inline-block cursor-pointer">
+              <div
+                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+              >
+                <img
+                  class="object-cover h-full"
+                  src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="mt-8 space-y-2">
+                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+                <h2 class="text-primary-200 font-bold text-2xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h2>
+              </div>
+            </div>
+            <div class="inline-block px-3 cursor-pointer">
+              <div
+                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+              >
+                <img
+                  class="object-cover h-full"
+                  src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="mt-8 space-y-2">
+                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+                <h2 class="text-primary-200 font-bold text-2xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h2>
+              </div>
+            </div>
+            <div class="inline-block px-3 cursor-pointer">
+              <div
+                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+              >
+                <img
+                  class="object-cover h-full"
+                  src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="mt-8 space-y-2">
+                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+                <h2 class="text-primary-200 font-bold text-2xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h2>
+              </div>
+            </div>
+            <div class="inline-block px-3 cursor-pointer">
+              <div
+                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+              >
+                <img
+                  class="object-cover h-full"
+                  src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="mt-8 space-y-2">
+                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+                <h2 class="text-primary-200 font-bold text-2xl">
+                  Lorem ipsum dolor sit amet consectetur adipisicing.
+                </h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="mt-20">
+        <div class="mb-10 text-4xl">
+          <h2 class="font-bold">Khám phá</h2>
+          <p class="w-24 h-2 mt-3 bg-accent-200 rounded-full"></p>
+        </div>
+
+        <!-- !Cards -->
+        <section class="grid grid-cols-2 gap-x-12 gap-y-16 border-b pb-20">
+          <div class="flex-col cursor-pointer">
+            <img
+              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+              alt=""
+            />
+            <div class="mt-8 space-y-2">
+              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+              <h2 class="text-primary-200 font-bold text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h2>
+              <p class="pb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex
+                maiores nostrum odio. Hic sit omnis, labore sed aliquam quae at
+                natus consequuntur provident excepturi delectus nisi
+                reprehenderit temporibus voluptates!
+              </p>
+              <a href="#" class="text-accent-300 underline font-medium"
+                >Khám phá thêm</a
+              >
+            </div>
+          </div>
+          <div class="flex-col cursor-pointer">
+            <img
+              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+              alt=""
+            />
+            <div class="mt-8 space-y-2">
+              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+              <h2 class="text-primary-200 font-bold text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h2>
+              <p class="pb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex
+                maiores nostrum odio. Hic sit omnis, labore sed aliquam quae at
+                natus consequuntur provident excepturi delectus nisi
+                reprehenderit temporibus voluptates!
+              </p>
+              <a href="#" class="text-accent-300 underline font-medium"
+                >Khám phá thêm</a
+              >
+            </div>
+          </div>
+          <div class="flex-col cursor-pointer">
+            <img
+              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+              alt=""
+            />
+            <div class="mt-8 space-y-2">
+              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+              <h2 class="text-primary-200 font-bold text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h2>
+              <p class="pb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex
+                maiores nostrum odio. Hic sit omnis, labore sed aliquam quae at
+                natus consequuntur provident excepturi delectus nisi
+                reprehenderit temporibus voluptates!
+              </p>
+              <a href="#" class="text-accent-300 underline font-medium"
+                >Khám phá thêm</a
+              >
+            </div>
+          </div>
+          <div class="flex-col cursor-pointer">
+            <img
+              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
+              alt=""
+            />
+            <div class="mt-8 space-y-2">
+              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
+              <h2 class="text-primary-200 font-bold text-2xl">
+                Lorem ipsum dolor sit amet consectetur adipisicing.
+              </h2>
+              <p class="pb-4">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo ex
+                maiores nostrum odio. Hic sit omnis, labore sed aliquam quae at
+                natus consequuntur provident excepturi delectus nisi
+                reprehenderit temporibus voluptates!
+              </p>
+              <a href="#" class="text-accent-300 underline font-medium"
+                >Khám phá thêm</a
+              >
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer aria-label="Site Footer" class="bg-primary-200">
+      <div
+        class="max-w-screen-xl px-20 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8 ml-16"
+      >
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div
+              class="text-secondary-100 font-extrabold tracking-tighter text-2xl"
+            >
+              <h2>Ticketfast</h2>
+            </div>
+
+            <p class="max-w-xs mt-4 text-secondary-350 text-sm font-light">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
+              cupiditate quae nam molestias.
+            </p>
+
+            <ul class="flex gap-6 mt-8">
+              <li
+                class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+              >
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                >
+                  <span class="sr-only">Facebook</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li
+                class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+              >
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                >
+                  <span class="sr-only">Instagram</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li
+                class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+              >
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                >
+                  <span class="sr-only">Twitter</span>
+
+                  <svg
+                    class="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 mt-16 lg:mt-0"
+          >
+            <div>
+              <p class="font-medium text-secondary-100">Services</p>
+
+              <nav class="mt-6">
+                <ul class="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      1on1 Coaching
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Company Review
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Accounts Review
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      HR Consulting
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      SEO Optimisation
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <p class="font-medium text-secondary-100">Company</p>
+              <nav aria-label="Footer Navigation - Company" class="mt-6">
+                <ul class="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      About
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Meet the Team
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Accounts Review
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <p class="font-medium text-secondary-100">Helpful Links</p>
+
+              <nav aria-label="Footer Navigation - Company" class="mt-6">
+                <ul class="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Contact
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      FAQs
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Live Chat
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-xs text-secondary-350">
+          &copy; 2022. Company Name. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
