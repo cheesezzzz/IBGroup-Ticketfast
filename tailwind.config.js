@@ -19,7 +19,8 @@ module.exports = {
         'accent-100': '#B5E865',
         'accent-200': '#99C455',
         'accent-300': '#81A648',
-        'accent-400': '#425424'
+        'accent-400': '#425424',
+        'stroke': '#E6E6E6'
       }
 
     },

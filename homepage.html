@@ -55,13 +55,15 @@
       </div>
 
       <!-- !Search Bar -->
-      <form class="w-[40rem] hidden md:block">
-        <div class="flex">
+      <form class="hidden md:flex">
+
+<!-- TODO: Work on the dropdown of the categories -->
+        <div class="relative">
           <button
-            class="flex-shrink-0 z-10 inline-flex items-center py-2.5 px-4 text-sm font-medium text-center text-primary-100 bg-secondary-250 rounded-l-lg hover:bg-secondary-300 ease-linear duration-100"
+            class="flex-shrink-0 z-10 justify-center items-center h-11 w-24 px-2 flex text-sm font-medium text-center text-primary-100 bg-secondary-250 rounded-l-lg hover:bg-secondary-300 ease-linear duration-100"
             type="button"
           >
-            Âm nhạc
+            <p>Âm nhạc</p>
             <svg
               aria-hidden="true"
               class="w-4 h-4 ml-1"
@@ -76,7 +78,23 @@
               ></path>
             </svg>
           </button>
-          <div class="relative w-full">
+          <div class="w-40 h-fit bg-secondary-100 absolute rounded-lg mt-2 shadow-sm shadow-primary-100 px-2 py-2">
+            <div>
+              <a href="#">Nice</a>
+            </div>
+            <div>
+              <a href="#">Nice</a>
+            </div>
+            <div>
+              <a href="#">Nice</a>
+            </div>
+            <div>
+              <a href="#">Nice</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="relative w-[40vw] h-11">
             <input
               type="search"
               class="block p-3 w-full z-20 text-sm text-secondary-100 bg-secondary-200 rounded-r-lg border-secondary-300 border-l-2"
@@ -108,7 +126,7 @@
       </form>
 
       <!-- !Register and Sign up Buttons -->
-      <div class="lg:flex items-center space-x-2">
+      <div class="flex items-center space-x-2">
         <button
           class="bg-transparent border-2 border-primary-300 text-primary-300 text-center rounded-lg w-28 h-10 font-medium hover:bg-black hover:text-secondary-100 duration-150 ease-in-out hidden lg:block"
         >
@@ -119,6 +137,12 @@
         >
           Đăng ký
         </button>
+        <button class="p-2 bg-secondary-200 md:hidden flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m18.9 20.3l-5.6-5.6q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.625 5.625q.275.275.275.675t-.3.7q-.275.275-.7.275t-.7-.275ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg>
+
+        </button>
+
+<!-- TODO: Dropdown of the profile icon -->
         <button
           class="p-2 bg-secondary-200 flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out"
         >
@@ -137,6 +161,12 @@
         </button>
       </div>
     </nav>
+    
+<!-- TODO: ADD A SLIDING IN SEARCH BAR WHEN CLICKED ON SEARCH BUTTON -->
+    <!-- !Search Bar -->
+    <div>
+      
+    </div>
 
     <!-- !Menu Navigation Slider -->
     <div
@@ -277,11 +307,10 @@
             <a href="#" class="link-hover">Bang Kieu</a>
           </div>
         </div>
-      </div>
 
-      <!-- !Socials -->
-      <div>
-
+<!-- TODO: ADD A SOCIAL MEDIA SECTION IN THE NAVIGATION MENU PAGE -->
+        <!-- !Socials -->
+        <div></div>
       </div>
     </div>
 
