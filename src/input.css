@@ -5,19 +5,7 @@
 @tailwind utilities;
 
 @layer components {
-    .open .hamburger {
-      background-color: transparent;
-    }
-  
-    .open .hamburger-0 .hamburger-2 {
-      transform: translateY(0);
-    }
-  
-    .open .hamburger-0 {
-      transform: rotate(-45deg);
-    }
-  
-    .open .hamburger-2 {
-      transform: rotate(45deg);
+    .link-hover {
+      @apply hover:text-primary-200 duration-150 ease-linear
     }
   }
