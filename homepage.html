@@ -57,7 +57,6 @@
       <!-- !Search Bar -->
       <form class="hidden md:flex">
         <div id="dropdown-category" class="relative">
-
           <!-- !Category Dropdown Button -->
           <button
             id="dropdown-button"
@@ -81,9 +80,14 @@
             </svg>
           </button>
           <!-- !Dropdown Menu -->
-          <div id="dropdown-category--detail" class="w-40 h-fit bg-secondary-100 absolute rounded-lg mt-2 shadow-md shadow-primary-50 px-2 py-3 space-y-2 -translate-y-2 opacity-0 duration-200 ease-in-out transition-all" dropdown-menu>
+          <div
+            id="dropdown-category--detail"
+            class="w-40 h-fit bg-secondary-100 absolute rounded-lg mt-2 shadow-md shadow-primary-50 px-2 py-3 space-y-2 -translate-y-2 opacity-0 duration-200 ease-in-out transition-all invisible"
+          >
             <div>
-              <h2 class="text-secondary-350 text-sm font-medium px-2">Thể loại</h2>
+              <h2 class="text-secondary-350 text-sm font-medium px-2">
+                Thể loại
+              </h2>
             </div>
             <div class="font-medium space-y-2">
               <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
@@ -99,12 +103,11 @@
           </div>
         </div>
 
-        <!-- !Search button in navbar -->
         <div>
           <div class="relative w-[40vw] h-11">
             <input
               type="search"
-              class="block p-3 w-full z-20 text-sm text-secondary-100 bg-secondary-200 rounded-r-lg border-secondary-300 border-l-2"
+              class="block p-3 w-full z-20 text-sm text-primary-300 bg-secondary-200 rounded-r-lg border-secondary-300 border-l-2 focus:outline-none"
               placeholder="Tìm kiếm"
               required
             />
@@ -144,36 +147,94 @@
         >
           Đăng ký
         </button>
-        <button class="p-2 bg-secondary-200 md:hidden flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="m18.9 20.3l-5.6-5.6q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.625 5.625q.275.275.275.675t-.3.7q-.275.275-.7.275t-.7-.275ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"/></svg>
 
-        </button>
-
-<!-- TODO: Dropdown of the profile icon -->
+        <!-- !Search Button -->
         <button
-          class="p-2 bg-secondary-200 flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out"
+          id="search-btn"
+          class="p-2 md:hidden flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out"
         >
           <svg
+            xmlns="http://www.w3.org/2000/svg"
             width="24"
             height="24"
             viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M15.8313 12.6049C17.3081 13.303 18.5673 14.3894 19.4741 15.7481C20.381 17.1067 20.9012 18.6863 20.9793 20.3179C20.9896 20.4674 20.97 20.6174 20.9215 20.7592C20.873 20.901 20.7967 21.0316 20.6971 21.1435C20.5974 21.2554 20.4764 21.3462 20.3412 21.4107C20.2059 21.4752 20.0592 21.512 19.9095 21.519C19.7599 21.526 19.6103 21.503 19.4696 21.4514C19.329 21.3998 19.2 21.3207 19.0904 21.2186C18.9807 21.1165 18.8926 20.9935 18.8311 20.8569C18.7696 20.7202 18.736 20.5727 18.7323 20.4229C18.6506 18.6897 17.9045 17.0546 16.649 15.8569C15.3935 14.6592 13.725 13.991 11.9898 13.991C10.2547 13.991 8.5862 14.6592 7.3307 15.8569C6.07519 17.0546 5.32911 18.6897 5.24734 20.4229C5.22714 20.7163 5.09286 20.9901 4.87327 21.1857C4.65368 21.3813 4.36624 21.4831 4.07249 21.4694C3.77874 21.4557 3.50204 21.3275 3.30165 21.1122C3.10126 20.897 2.9931 20.6119 3.00034 20.3179C3.07813 18.6864 3.59814 17.1068 4.50469 15.7482C5.41125 14.3896 6.67022 13.303 8.14684 12.6049C7.20036 11.8155 6.52004 10.7536 6.19842 9.56378C5.8768 8.37397 5.9295 7.11397 6.34934 5.95517C6.76918 4.79637 7.53579 3.79503 8.54489 3.08734C9.55398 2.37966 10.7566 2 11.9891 2C13.2216 2 14.4242 2.37966 15.4333 3.08734C16.4424 3.79503 17.209 4.79637 17.6288 5.95517C18.0487 7.11397 18.1014 8.37397 17.7798 9.56378C17.4581 10.7536 16.7778 11.8155 15.8313 12.6049ZM15.7398 7.99542C15.7398 7.00086 15.3448 6.04703 14.6415 5.34377C13.9382 4.64051 12.9844 4.24542 11.9898 4.24542C10.9953 4.24542 10.0415 4.64051 9.33819 5.34377C8.63493 6.04703 8.23984 7.00086 8.23984 7.99542C8.23984 8.98998 8.63493 9.94381 9.33819 10.6471C10.0415 11.3503 10.9953 11.7454 11.9898 11.7454C12.9844 11.7454 13.9382 11.3503 14.6415 10.6471C15.3448 9.94381 15.7398 8.98998 15.7398 7.99542Z"
-              fill="black"
+              fill="currentColor"
+              d="m18.9 20.3l-5.6-5.6q-.75.6-1.725.95T9.5 16q-2.725 0-4.612-1.888T3 9.5q0-2.725 1.888-4.612T9.5 3q2.725 0 4.612 1.888T16 9.5q0 1.1-.35 2.075T14.7 13.3l5.625 5.625q.275.275.275.675t-.3.7q-.275.275-.7.275t-.7-.275ZM9.5 14q1.875 0 3.188-1.313T14 9.5q0-1.875-1.313-3.188T9.5 5Q7.625 5 6.312 6.313T5 9.5q0 1.875 1.313 3.188T9.5 14Z"
             />
           </svg>
         </button>
+
+        <!-- !Profile Button -->
+        <div class="relative">
+          <button
+            id="dropdown-button--profile"
+            class="p-2 bg-secondary-200 flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out"
+          >
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15.8313 12.6049C17.3081 13.303 18.5673 14.3894 19.4741 15.7481C20.381 17.1067 20.9012 18.6863 20.9793 20.3179C20.9896 20.4674 20.97 20.6174 20.9215 20.7592C20.873 20.901 20.7967 21.0316 20.6971 21.1435C20.5974 21.2554 20.4764 21.3462 20.3412 21.4107C20.2059 21.4752 20.0592 21.512 19.9095 21.519C19.7599 21.526 19.6103 21.503 19.4696 21.4514C19.329 21.3998 19.2 21.3207 19.0904 21.2186C18.9807 21.1165 18.8926 20.9935 18.8311 20.8569C18.7696 20.7202 18.736 20.5727 18.7323 20.4229C18.6506 18.6897 17.9045 17.0546 16.649 15.8569C15.3935 14.6592 13.725 13.991 11.9898 13.991C10.2547 13.991 8.5862 14.6592 7.3307 15.8569C6.07519 17.0546 5.32911 18.6897 5.24734 20.4229C5.22714 20.7163 5.09286 20.9901 4.87327 21.1857C4.65368 21.3813 4.36624 21.4831 4.07249 21.4694C3.77874 21.4557 3.50204 21.3275 3.30165 21.1122C3.10126 20.897 2.9931 20.6119 3.00034 20.3179C3.07813 18.6864 3.59814 17.1068 4.50469 15.7482C5.41125 14.3896 6.67022 13.303 8.14684 12.6049C7.20036 11.8155 6.52004 10.7536 6.19842 9.56378C5.8768 8.37397 5.9295 7.11397 6.34934 5.95517C6.76918 4.79637 7.53579 3.79503 8.54489 3.08734C9.55398 2.37966 10.7566 2 11.9891 2C13.2216 2 14.4242 2.37966 15.4333 3.08734C16.4424 3.79503 17.209 4.79637 17.6288 5.95517C18.0487 7.11397 18.1014 8.37397 17.7798 9.56378C17.4581 10.7536 16.7778 11.8155 15.8313 12.6049ZM15.7398 7.99542C15.7398 7.00086 15.3448 6.04703 14.6415 5.34377C13.9382 4.64051 12.9844 4.24542 11.9898 4.24542C10.9953 4.24542 10.0415 4.64051 9.33819 5.34377C8.63493 6.04703 8.23984 7.00086 8.23984 7.99542C8.23984 8.98998 8.63493 9.94381 9.33819 10.6471C10.0415 11.3503 10.9953 11.7454 11.9898 11.7454C12.9844 11.7454 13.9382 11.3503 14.6415 10.6471C15.3448 9.94381 15.7398 8.98998 15.7398 7.99542Z"
+                fill="black"
+              />
+            </svg>
+          </button>
+          <div
+            id="dropdown-profile--detail"
+            class="w-40 h-fit bg-secondary-100 absolute right-0 rounded-lg mt-4 shadow-md shadow-primary-50 px-2 py-3 space-y-2 -translate-y-2 opacity-0 duration-200 ease-in-out transition-all invisible"
+          >
+            <div class="font-medium space-y-2">
+              <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
+                <a href="#">Đăng nhập</a>
+              </div>
+              <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
+                <a href="#">Đăng ký</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
-    
-<!-- TODO: ADD A SLIDING IN SEARCH BAR WHEN CLICKED ON SEARCH BUTTON -->
     <!-- !Sliding down Search Bar -->
-    <div>
-      
-    </div>
+    <form id="search-slidein" class="top-24 sticky max-h-0 overflow-hidden md:hidden transition-all duration-300 ease-in-out z-50">
+      <label class="mb-2 text-sm font-medium text-gray-900 sr-only">Search</label>
+      <div class="relative">
+        <div
+          class="absolute inset-y-0 left-10 flex items-center pl-3 pointer-events-none"
+        >
+          <svg
+            aria-hidden="true"
+            class="w-20 h-20 text-secondary-350"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+            ></path>
+          </svg>
+        </div>
+        <input
+          type="search"
+          class="block w-full p-4 h-40 pl-40 placeholder:text-2xl placeholder:text-primary-50 text-2xl uppercase text-secondary-300 bg-primary-100 focus:outline-none"
+          placeholder="Tìm kiếm sự kiện, show, âm nhạc..."
+          required
+        />
+      </div>
+    </form>
+
+
+    
 
     <!-- !Menu Navigation Slider -->
     <div
@@ -397,6 +458,8 @@
       </div>
     </div>
 
+    <!-- TODO: ADD A SLIDING IN SEARCH BAR WHEN CLICKED ON SEARCH BUTTON -->
+    
     <!-- !Hero Section -->
     <section
       class="bg-gradient-to-r from-primary-200 w-full h-[75vh] relative overflow-hidden flex items-center"
@@ -581,7 +644,9 @@
         </div>
 
         <!-- !Cards -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 border-b pb-20">
+        <section
+          class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 border-b pb-20"
+        >
           <div class="flex-col cursor-pointer">
             <img
               class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
