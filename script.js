@@ -23,8 +23,6 @@ document.addEventListener('click', (e) => {
   }
 })
 
-
-
 // !Menu Navigation
 // Displaying Menu Navigation Slider Function
 const showNavigation = function () {
