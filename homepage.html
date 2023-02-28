@@ -9,26 +9,25 @@
   <body id="body" class="m-0 p-0 font-inter tracking-tight overflow-x-hidden">
     <!-- !Announcement Header -->
     <header
-      class="w-full h-12 bg-accent-400 px-20 py-8 flex-col lg:flex-row flex justify-center items-center space-y-1 space-x-2 lg:space-y-0"
+      class="w-full h-12 bg-accent-400 px-20 py-8  lg:flex-row flex justify-center items-center space-y-1 space-x-2 lg:space-y-0"
     >
       <p
         class="text-secondary-250 text-center font-light text-xs md:text-sm lg:text-base"
       >
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus,
-        autem accusantium. Quae soluta saepe.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
-      <button class="bg-primary-200 text-secondary-100 w-7 h-7 rounded-full">
+      <button class="bg-primary-200 text-secondary-100 w-7 h-7 rounded-full px-2">
         <p class="font-extralight text-sm">X</p>
       </button>
     </header>
 
     <!-- !Navigation Bar Homepage -->
     <nav
-      class="h-fit py-5 bg-secondary-100 shadow-md flex items-center justify-between px-20 space-x-10 sticky top-0 z-50"
+      class="h-fit w-full py-5 bg-secondary-100 shadow-md flex items-center justify-between px-2 sm:px-20 space-x-10 sticky top-0 z-50 "
     >
       <!-- !Hamburger Button -->
       <div
-        class="md:hidden rounded-full w-16 h-16 hover:bg-secondary-200 flex justify-center items-center"
+        class="md:hidden rounded-full hover:bg-secondary-200 flex justify-center items-center"
       >
         <button
           id="hamburger-btn"
@@ -55,7 +54,7 @@
       </div>
 
       <!-- !Search Bar -->
-      <form class="hidden md:flex">
+      <form class="invisible hidden md:visible md:flex">
         <div id="dropdown-category" class="relative">
           <!-- !Category Dropdown Button -->
           <button
@@ -167,7 +166,7 @@
         </button>
 
         <!-- !Profile Button -->
-        <div class="relative">
+        <div class="relative pr-2">
           <button
             id="dropdown-button--profile"
             class="p-2 bg-secondary-200 flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out"
