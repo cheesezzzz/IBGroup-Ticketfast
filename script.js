@@ -10,7 +10,7 @@ const searchSlideIn = document.querySelector("#search-slidein")
 const searchBtn = document.querySelector('#search-btn')
 const body = document.querySelector("#body");
 
-// TODO HELP: How can I abstract/refactor the overall code so theres only one function for dropdown menus?
+// TODO HELP: How should I abstract/refactor the overall code so theres only one function for dropdown menus?
 
 // !Category Dropdown 
 document.addEventListener('click', (e) => {
@@ -29,6 +29,7 @@ document.addEventListener('click', (e) => {
   }
 })
 
+////////////////////////////////////////////////////////////////////
 // !Profile Dropdown
 document.addEventListener('click', (e) => {
   const isDropdownButton = e.target.closest('#dropdown-button--profile')
@@ -49,6 +50,8 @@ document.addEventListener('click', (e) => {
   }
 })
 
+
+////////////////////////////////////////////////
 // !Menu Navigation
 // Displaying Menu Navigation Slider Function
 const showNavigation = function () {
@@ -85,6 +88,7 @@ btnCloseMenu.addEventListener("click", () => {
 //   }
 // })
 
+///////////////////////////////////////////////////////////
 // !Accordion Drop Down
 Array.from(accordionBtn).forEach((e) => {
   e.addEventListener("click", () => {
@@ -92,6 +96,7 @@ Array.from(accordionBtn).forEach((e) => {
   });
 });
 
+//////////////////////////////////////////////////////////
 // !Search slide in
 searchBtn.addEventListener('click', function() {
   searchSlideIn.classList.toggle('max-h-44')

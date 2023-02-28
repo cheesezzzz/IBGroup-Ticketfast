@@ -8,4 +8,7 @@
     .link-hover {
       @apply hover:text-primary-200 duration-150 ease-linear
     }
+    .link-hover-footer {
+      @apply hover:text-secondary-350 duration-150 ease-linear
+    }
   }
