@@ -6,32 +6,34 @@
     <link href="./dist/output.css" rel="stylesheet" />
     <script defer src="script.js"></script>
   </head>
-  <body id="body" class="m-0 p-0 font-inter tracking-tight overflow-x-hidden">
+  <body id="body" class="m-0 overflow-x-hidden p-0 font-inter tracking-tight">
     <!-- !Announcement Header -->
     <header
-      class="w-full h-12 bg-accent-400 px-20 py-8  lg:flex-row flex justify-center items-center space-y-1 space-x-2 lg:space-y-0"
+      class="flex h-12 w-full items-center justify-center space-y-1 space-x-2 bg-accent-400 px-20 py-8 lg:flex-row lg:space-y-0"
     >
       <p
-        class="text-secondary-250 text-center font-light text-xs md:text-sm lg:text-base"
+        class="text-center text-xs font-light text-secondary-250 md:text-sm lg:text-base"
       >
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
-      <button class="bg-primary-200 text-secondary-100 w-7 h-7 rounded-full px-2">
-        <p class="font-extralight text-sm">X</p>
+      <button
+        class="h-7 w-7 rounded-full bg-primary-200 px-2 text-secondary-100"
+      >
+        <p class="text-sm font-extralight">X</p>
       </button>
     </header>
 
     <!-- !Navigation Bar Homepage -->
     <nav
-      class="h-fit w-full py-5 bg-secondary-100 shadow-md flex items-center justify-between px-2 sm:px-20 space-x-10 sticky top-0 z-50 "
+      class="sticky top-0 z-50 flex h-fit w-full items-center justify-between space-x-10 bg-secondary-100 py-5 px-2 shadow-md sm:px-20"
     >
       <!-- !Hamburger Button -->
       <div
-        class="md:hidden rounded-full hover:bg-secondary-200 flex justify-center items-center"
+        class="flex items-center justify-center rounded-full hover:bg-secondary-200 md:hidden"
       >
         <button
           id="hamburger-btn"
-          class="flex cursor-pointer relative justify-center items-center"
+          class="relative flex cursor-pointer items-center justify-center"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -49,7 +51,7 @@
       <!-- !Logo -->
       <div>
         <a href="#">
-          <h1 class="font-extrabold tracking-tighter text-2xl">Ticketfast</h1>
+          <h1 class="text-2xl font-extrabold tracking-tighter">Ticketfast</h1>
         </a>
       </div>
 
@@ -59,14 +61,14 @@
           <!-- !Category Dropdown Button -->
           <button
             id="dropdown-button"
-            class="flex-shrink-0 z-10 justify-center items-center h-11 w-24 px-2 flex text-sm font-medium text-center text-primary-100 bg-secondary-250 rounded-l-lg hover:bg-secondary-300 ease-linear duration-100"
+            class="z-10 flex h-11 w-24 flex-shrink-0 items-center justify-center rounded-l-lg bg-secondary-250 px-2 text-center text-sm font-medium text-primary-100 duration-100 ease-linear hover:bg-secondary-300"
             type="button"
             data-dropdown-button
           >
             <p>Âm nhạc</p>
             <svg
               aria-hidden="true"
-              class="w-4 h-4 ml-1"
+              class="ml-1 h-4 w-4"
               fill="currentColor"
               viewBox="0 0 20 20"
               xmlns="http://www.w3.org/2000/svg"
@@ -81,21 +83,21 @@
           <!-- !Dropdown Menu -->
           <div
             id="dropdown-category--detail"
-            class="w-40 h-fit bg-secondary-100 absolute rounded-lg mt-2 shadow-md shadow-primary-50 px-2 py-3 space-y-2 -translate-y-2 opacity-0 duration-200 ease-in-out transition-all invisible"
+            class="invisible absolute mt-2 h-fit w-40 -translate-y-2 space-y-2 rounded-lg bg-secondary-100 px-2 py-3 opacity-0 shadow-md shadow-primary-50 transition-all duration-200 ease-in-out"
           >
             <div>
-              <h2 class="text-secondary-350 text-sm font-medium px-2">
+              <h2 class="px-2 text-sm font-medium text-secondary-350">
                 Thể loại
               </h2>
             </div>
-            <div class="font-medium space-y-2">
-              <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
+            <div class="space-y-2 font-medium">
+              <div class="rounded-md px-2 py-2 hover:bg-secondary-250">
                 <a href="#">Sự kiện</a>
               </div>
-              <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
+              <div class="rounded-md px-2 py-2 hover:bg-secondary-250">
                 <a href="#">Show</a>
               </div>
-              <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
+              <div class="rounded-md px-2 py-2 hover:bg-secondary-250">
                 <a href="#">Truyền hình</a>
               </div>
             </div>
@@ -103,20 +105,20 @@
         </div>
 
         <div>
-          <div class="relative w-[40vw] h-11">
+          <div class="relative h-11 w-[40vw]">
             <input
               type="search"
-              class="block p-3 w-full z-20 text-sm text-primary-300 bg-secondary-200 rounded-r-lg border-secondary-300 border-l-2 focus:outline-none"
+              class="z-20 block w-full rounded-r-lg border-l-2 border-secondary-300 bg-secondary-200 p-3 text-sm text-primary-300 focus:outline-none"
               placeholder="Tìm kiếm"
               required
             />
             <button
               type="submit"
-              class="absolute top-0 right-0 p-3 text-sm font-medium text-white bg-transparent rounded-r-lg hover:bg-secondary-200 focus:ring-4 focus:outline-none"
+              class="absolute top-0 right-0 rounded-r-lg bg-transparent p-3 text-sm font-medium text-white hover:bg-secondary-200 focus:outline-none focus:ring-4"
             >
               <svg
                 aria-hidden="true"
-                class="w-5 h-5"
+                class="h-5 w-5"
                 fill="none"
                 stroke="#000"
                 viewBox="0 0 24 24"
@@ -137,12 +139,12 @@
       <!-- !Register and Sign up Buttons -->
       <div class="flex items-center space-x-2">
         <button
-          class="bg-transparent border-2 border-primary-300 text-primary-300 text-center rounded-lg w-28 h-10 font-medium hover:bg-black hover:text-secondary-100 duration-150 ease-in-out hidden lg:block"
+          class="hidden h-10 w-28 rounded-lg border-2 border-primary-300 bg-transparent text-center font-medium text-primary-300 duration-150 ease-in-out hover:bg-black hover:text-secondary-100 lg:block"
         >
           Đăng nhập
         </button>
         <button
-          class="bg-black text-secondary-100 text-center rounded-lg w-24 h-10 font-medium hover:bg-secondary-100 hover:bg-transparent hover:border-2 hover:border-primary-300 hover:text-primary-300 duration-150 ease-in-out hidden lg:block"
+          class="hidden h-10 w-24 rounded-lg bg-black text-center font-medium text-secondary-100 duration-150 ease-in-out hover:border-2 hover:border-primary-300 hover:bg-secondary-100 hover:bg-transparent hover:text-primary-300 lg:block"
         >
           Đăng ký
         </button>
@@ -150,7 +152,7 @@
         <!-- !Search Button -->
         <button
           id="search-btn"
-          class="p-2 md:hidden flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out"
+          class="flex items-center justify-center rounded-lg p-2 duration-100 ease-in-out hover:bg-secondary-250 md:hidden lg:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +171,7 @@
         <div class="relative pr-2">
           <button
             id="dropdown-button--profile"
-            class="p-2 bg-secondary-200 flex justify-center items-center rounded-lg lg:hidden hover:bg-secondary-250 duration-100 ease-in-out"
+            class="flex items-center justify-center rounded-lg bg-secondary-200 p-2 duration-100 ease-in-out hover:bg-secondary-250 lg:hidden"
           >
             <svg
               width="24"
@@ -186,13 +188,13 @@
           </button>
           <div
             id="dropdown-profile--detail"
-            class="w-40 h-fit bg-secondary-100 absolute right-0 rounded-lg mt-4 shadow-md shadow-primary-50 px-2 py-3 space-y-2 -translate-y-2 opacity-0 duration-200 ease-in-out transition-all invisible"
+            class="invisible absolute right-0 mt-4 h-fit w-40 -translate-y-2 space-y-2 rounded-lg bg-secondary-100 px-2 py-3 opacity-0 shadow-md shadow-primary-50 transition-all duration-200 ease-in-out"
           >
-            <div class="font-medium space-y-2">
-              <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
+            <div class="space-y-2 font-medium">
+              <div class="rounded-md px-2 py-2 hover:bg-secondary-250">
                 <a href="#">Đăng nhập</a>
               </div>
-              <div class="hover:bg-secondary-250 rounded-md px-2 py-2">
+              <div class="rounded-md px-2 py-2 hover:bg-secondary-250">
                 <a href="#">Đăng ký</a>
               </div>
             </div>
@@ -203,18 +205,18 @@
     <!-- !Sliding down Search Bar -->
     <form
       id="search-slidein"
-      class="top-24 sticky max-h-0 overflow-hidden md:hidden transition-all duration-300 ease-in-out z-50"
+      class="sticky top-24 z-50 max-h-0 overflow-hidden transition-all duration-300 ease-in-out md:hidden"
     >
-      <label class="mb-2 text-sm font-medium text-gray-900 sr-only"
+      <label class="sr-only mb-2 text-sm font-medium text-gray-900"
         >Search</label
       >
       <div class="relative">
         <div
-          class="absolute inset-y-0 left-10 flex items-center pl-3 pointer-events-none"
+          class="pointer-events-none absolute inset-y-0 left-3 flex items-center pl-3 sm:left-10"
         >
           <svg
             aria-hidden="true"
-            class="w-20 h-20 text-secondary-350"
+            class="h-20 w-20 text-secondary-350"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -230,7 +232,7 @@
         </div>
         <input
           type="search"
-          class="block w-full p-4 h-40 pl-40 placeholder:text-2xl placeholder:text-primary-50 text-2xl uppercase text-secondary-300 bg-primary-100 focus:outline-none"
+          class="block h-40 w-full bg-primary-100 p-4 pl-28 text-xl uppercase text-secondary-300 placeholder:text-primary-50 focus:outline-none sm:pl-40 sm:text-2xl placeholder:sm:text-2xl"
           placeholder="Tìm kiếm sự kiện, show, âm nhạc..."
           required
         />
@@ -240,12 +242,12 @@
     <!-- !Menu Navigation Slider -->
     <div
       id="menu-slider"
-      class="fixed h-screen overflow-y-auto drop-shadow-lg bg-secondary-100 w-96 top-0 left-0 z-50 -translate-x-full duration-300 ease-in-out px-5 pb-10"
+      class="fixed top-0 left-0 z-50 h-screen w-96 -translate-x-full overflow-y-auto bg-secondary-100 px-5 pb-10 drop-shadow-lg duration-300 ease-in-out"
     >
-      <div class="flex items-center h-24 relative border-b mb-12">
+      <div class="relative mb-12 flex h-24 items-center border-b">
         <button
           id="menuClose"
-          class="absolute top-4 right-0 hover:bg-secondary-200 rounded-full"
+          class="absolute top-4 right-0 rounded-full hover:bg-secondary-200"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -270,7 +272,7 @@
         <div>
           <button
             id="accordion-btn"
-            class="h-20 w-full hover:bg-secondary-200 duration-200 ease-linear flex justify-between items-center px-2"
+            class="flex h-20 w-full items-center justify-between px-2 duration-200 ease-linear hover:bg-secondary-200"
           >
             <div>
               <h2 class="font-semibold">Âm nhạc</h2>
@@ -293,7 +295,7 @@
           </button>
           <div
             id="accordion-links"
-            class="bg-secondary-100 flex flex-col space-y-3 py-3 pl-2 hidden text-primary-50"
+            class="flex hidden flex-col space-y-3 bg-secondary-100 py-3 pl-2 text-primary-50"
           >
             <a href="#" class="link-hover">Legend Concert</a>
             <a href="#" class="link-hover">Chuyen Tinh</a>
@@ -307,7 +309,7 @@
         <div>
           <button
             id="accordion-btn"
-            class="h-20 w-full hover:bg-secondary-200 duration-200 ease-linear flex justify-between items-center px-2"
+            class="flex h-20 w-full items-center justify-between px-2 duration-200 ease-linear hover:bg-secondary-200"
           >
             <div>
               <h2 class="font-semibold">Truyền hình</h2>
@@ -330,7 +332,7 @@
           </button>
           <div
             id="accordionLinks"
-            class="bg-secondary-100 flex flex-col space-y-3 py-3 pl-2 hidden text-primary-50"
+            class="flex hidden flex-col space-y-3 bg-secondary-100 py-3 pl-2 text-primary-50"
           >
             <a href="#" class="link-hover">Legend Concert</a>
             <a href="#" class="link-hover">Chuyen Tinh</a>
@@ -344,7 +346,7 @@
         <div>
           <button
             id="accordion-btn"
-            class="h-20 w-full hover:bg-secondary-200 duration-200 ease-linear flex justify-between items-center px-2"
+            class="flex h-20 w-full items-center justify-between px-2 duration-200 ease-linear hover:bg-secondary-200"
           >
             <div>
               <h2 class="font-semibold">Sự Kiện</h2>
@@ -367,7 +369,7 @@
           </button>
           <div
             id="accordionLinks"
-            class="bg-secondary-100 flex flex-col space-y-3 py-3 pl-2 hidden text-primary-50"
+            class="flex hidden flex-col space-y-3 bg-secondary-100 py-3 pl-2 text-primary-50"
           >
             <a href="#" class="link-hover">Legend Concert</a>
             <a href="#" class="link-hover">Chuyen Tinh</a>
@@ -378,21 +380,21 @@
         </div>
 
         <!-- !Socials -->
-        <div class="pt-48 flex justify-center">
-          <ul class="flex gap-6 mt-8">
+        <div class="flex justify-center pt-48">
+          <ul class="mt-8 flex gap-6">
             <li
-              class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+              class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
             >
               <a
                 href="/"
                 rel="noreferrer"
                 target="_blank"
-                class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                class="flex items-center text-secondary-200 transition hover:opacity-75"
               >
                 <span class="sr-only">Facebook</span>
 
                 <svg
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -407,17 +409,17 @@
             </li>
 
             <li
-              class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+              class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
             >
               <a
                 href="/"
                 rel="noreferrer"
                 target="_blank"
-                class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                class="flex items-center text-secondary-200 transition hover:opacity-75"
               >
                 <span class="sr-only">Instagram</span>
                 <svg
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -432,18 +434,18 @@
             </li>
 
             <li
-              class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+              class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
             >
               <a
                 href="/"
                 rel="noreferrer"
                 target="_blank"
-                class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                class="flex items-center text-secondary-200 transition hover:opacity-75"
               >
                 <span class="sr-only">Twitter</span>
 
                 <svg
-                  class="w-6 h-6"
+                  class="h-6 w-6"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                   aria-hidden="true"
@@ -459,29 +461,27 @@
       </div>
     </div>
 
-    <!-- TODO: ADD A SLIDING IN SEARCH BAR WHEN CLICKED ON SEARCH BUTTON -->
-
     <!-- !Hero Section -->
     <section
-      class="bg-gradient-to-r from-primary-200 w-full h-[75vh] relative overflow-hidden flex items-center"
+      class="relative flex h-[75vh] w-full items-center overflow-hidden bg-gradient-to-r from-primary-200"
     >
       <img
-        class="absolute top-0 left-0 min-w-full min-h-full -z-10 object-cover"
+        class="absolute top-0 left-0 -z-10 min-h-full min-w-full object-cover"
         src="https://images.unsplash.com/photo-1541473211644-5cb06d3c68ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
         alt="artist"
       />
       <div class="mx-20 max-w-3xl space-y-6">
         <div class="space-y-3">
-          <h1 class="text-4xl text-secondary-100 font-semibold">
+          <h1 class="text-4xl font-semibold text-secondary-100">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </h1>
-          <p class="text-secondary-300 font-light max-w-xl">
+          <p class="max-w-xl font-light text-secondary-300">
             Vel nobis sequi tenetur? Voluptatem placeat tenetur corporis quo
             dignissimos esse, tempora perspiciatis dolorum sint qui.
           </p>
         </div>
         <button
-          class="rounded-full bg-accent-300 w-36 h-12 text-secondary-250 font-semibold hover:bg-accent-400 ease-linear duration-100"
+          class="h-12 w-36 rounded-full bg-accent-300 font-semibold text-secondary-250 duration-100 ease-linear hover:bg-accent-400"
         >
           Mua vé
         </button>
@@ -492,62 +492,62 @@
     <main class="p-16">
       <div class="mb-10 text-4xl">
         <h2 class="font-bold">Sự kiện đặc sắc</h2>
-        <p class="w-24 h-2 mt-3 bg-accent-200 rounded-full"></p>
+        <p class="mt-3 h-2 w-24 rounded-full bg-accent-200"></p>
       </div>
 
       <!-- !Cards -->
       <section
-        class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 border-b pb-20"
+        class="grid grid-cols-1 gap-x-12 gap-y-16 border-b pb-20 lg:grid-cols-2"
       >
-        <div class="flex-col cursor-pointer">
+        <div class="cursor-pointer flex-col">
           <img
-            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
             src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
             alt=""
           />
 
           <div class="mt-8 space-y-2">
-            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-            <h2 class="text-primary-200 font-bold text-2xl">
+            <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+            <h2 class="text-2xl font-bold text-primary-200">
               Lorem ipsum dolor sit amet consectetur adipisicing.
             </h2>
           </div>
         </div>
-        <div class="flex-col cursor-pointer">
+        <div class="cursor-pointer flex-col">
           <img
-            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
             src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
             alt=""
           />
           <div class="mt-8 space-y-2">
-            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-            <h2 class="text-primary-200 font-bold text-2xl">
+            <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+            <h2 class="text-2xl font-bold text-primary-200">
               Lorem ipsum dolor sit amet consectetur adipisicing.
             </h2>
           </div>
         </div>
-        <div class="flex-col cursor-pointer">
+        <div class="cursor-pointer flex-col">
           <img
-            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
             src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
             alt=""
           />
           <div class="mt-8 space-y-2">
-            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-            <h2 class="text-primary-200 font-bold text-2xl">
+            <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+            <h2 class="text-2xl font-bold text-primary-200">
               Lorem ipsum dolor sit amet consectetur adipisicing.
             </h2>
           </div>
         </div>
-        <div class="flex-col cursor-pointer">
+        <div class="cursor-pointer flex-col">
           <img
-            class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+            class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
             src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
             alt=""
           />
           <div class="mt-8 space-y-2">
-            <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-            <h2 class="text-primary-200 font-bold text-2xl">
+            <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+            <h2 class="text-2xl font-bold text-primary-200">
               Lorem ipsum dolor sit amet consectetur adipisicing.
             </h2>
           </div>
@@ -557,79 +557,79 @@
       <!-- !Popular Section -->
 
       <!-- !Heading -->
-      <div class="mb-10 text-4xl mt-12">
+      <div class="mb-10 mt-12 text-4xl">
         <h2 class="font-bold">Nổi bật</h2>
-        <p class="w-24 h-2 mt-3 bg-accent-200 rounded-full"></p>
+        <p class="mt-3 h-2 w-24 rounded-full bg-accent-200"></p>
       </div>
 
       <!-- !Horizontal Scrolling Section -->
       <div class="flex flex-col bg-white">
-        <div class="flex overflow-x-scroll pb-10 hide-scroll-bar">
+        <div class="hide-scroll-bar flex overflow-x-scroll pb-10">
           <div class="flex">
             <div class="inline-block cursor-pointer">
               <div
-                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                class="h-64 w-96 overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl"
               >
                 <img
-                  class="object-cover h-full"
+                  class="h-full object-cover"
                   src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
                   alt=""
                 />
               </div>
               <div class="mt-8 space-y-2">
-                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-                <h2 class="text-primary-200 font-bold text-2xl">
+                <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+                <h2 class="text-2xl font-bold text-primary-200">
                   Lorem ipsum dolor sit amet consectetur adipisicing.
                 </h2>
               </div>
             </div>
-            <div class="inline-block px-3 cursor-pointer">
+            <div class="inline-block cursor-pointer px-3">
               <div
-                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                class="h-64 w-96 overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl"
               >
                 <img
-                  class="object-cover h-full"
+                  class="h-full object-cover"
                   src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
                   alt=""
                 />
               </div>
               <div class="mt-8 space-y-2">
-                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-                <h2 class="text-primary-200 font-bold text-2xl">
+                <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+                <h2 class="text-2xl font-bold text-primary-200">
                   Lorem ipsum dolor sit amet consectetur adipisicing.
                 </h2>
               </div>
             </div>
-            <div class="inline-block px-3 cursor-pointer">
+            <div class="inline-block cursor-pointer px-3">
               <div
-                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                class="h-64 w-96 overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl"
               >
                 <img
-                  class="object-cover h-full"
+                  class="h-full object-cover"
                   src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
                   alt=""
                 />
               </div>
               <div class="mt-8 space-y-2">
-                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-                <h2 class="text-primary-200 font-bold text-2xl">
+                <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+                <h2 class="text-2xl font-bold text-primary-200">
                   Lorem ipsum dolor sit amet consectetur adipisicing.
                 </h2>
               </div>
             </div>
-            <div class="inline-block px-3 cursor-pointer">
+            <div class="inline-block cursor-pointer px-3">
               <div
-                class="h-64 w-96 overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out"
+                class="h-64 w-96 overflow-hidden rounded-lg bg-white shadow-md transition-shadow duration-300 ease-in-out hover:shadow-xl"
               >
                 <img
-                  class="object-cover h-full"
+                  class="h-full object-cover"
                   src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
                   alt=""
                 />
               </div>
               <div class="mt-8 space-y-2">
-                <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-                <h2 class="text-primary-200 font-bold text-2xl">
+                <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+                <h2 class="text-2xl font-bold text-primary-200">
                   Lorem ipsum dolor sit amet consectetur adipisicing.
                 </h2>
               </div>
@@ -641,22 +641,22 @@
       <section class="mt-20">
         <div class="mb-10 text-4xl">
           <h2 class="font-bold">Khám phá</h2>
-          <p class="w-24 h-2 mt-3 bg-accent-200 rounded-full"></p>
+          <p class="mt-3 h-2 w-24 rounded-full bg-accent-200"></p>
         </div>
 
         <!-- !Cards -->
         <section
-          class="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16 border-b pb-20"
+          class="grid grid-cols-1 gap-x-12 gap-y-16 border-b pb-20 lg:grid-cols-2"
         >
-          <div class="flex-col cursor-pointer">
+          <div class="cursor-pointer flex-col">
             <img
-              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
               src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
               alt=""
             />
             <div class="mt-8 space-y-2">
-              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-              <h2 class="text-primary-200 font-bold text-2xl">
+              <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+              <h2 class="text-2xl font-bold text-primary-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing.
               </h2>
               <p class="pb-4">
@@ -665,20 +665,20 @@
                 natus consequuntur provident excepturi delectus nisi
                 reprehenderit temporibus voluptates!
               </p>
-              <a href="#" class="text-accent-300 underline font-medium"
+              <a href="#" class="font-medium text-accent-300 underline"
                 >Khám phá thêm</a
               >
             </div>
           </div>
-          <div class="flex-col cursor-pointer">
+          <div class="cursor-pointer flex-col">
             <img
-              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
               src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
               alt=""
             />
             <div class="mt-8 space-y-2">
-              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-              <h2 class="text-primary-200 font-bold text-2xl">
+              <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+              <h2 class="text-2xl font-bold text-primary-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing.
               </h2>
               <p class="pb-4">
@@ -687,20 +687,20 @@
                 natus consequuntur provident excepturi delectus nisi
                 reprehenderit temporibus voluptates!
               </p>
-              <a href="#" class="text-accent-300 underline font-medium"
+              <a href="#" class="font-medium text-accent-300 underline"
                 >Khám phá thêm</a
               >
             </div>
           </div>
-          <div class="flex-col cursor-pointer">
+          <div class="cursor-pointer flex-col">
             <img
-              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
               src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
               alt=""
             />
             <div class="mt-8 space-y-2">
-              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-              <h2 class="text-primary-200 font-bold text-2xl">
+              <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+              <h2 class="text-2xl font-bold text-primary-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing.
               </h2>
               <p class="pb-4">
@@ -709,20 +709,20 @@
                 natus consequuntur provident excepturi delectus nisi
                 reprehenderit temporibus voluptates!
               </p>
-              <a href="#" class="text-accent-300 underline font-medium"
+              <a href="#" class="font-medium text-accent-300 underline"
                 >Khám phá thêm</a
               >
             </div>
           </div>
-          <div class="flex-col cursor-pointer">
+          <div class="cursor-pointer flex-col">
             <img
-              class="rounded-lg drop-shadow-xl hover:scale-105 duration-200 ease-linear"
+              class="rounded-lg drop-shadow-xl duration-200 ease-linear hover:scale-105"
               src="https://www.nme.com/wp-content/uploads/2021/06/redvelvet-psycho-2019.jpg"
               alt=""
             />
             <div class="mt-8 space-y-2">
-              <p class="text-primary-50 font-medium text-lg">Âm nhạc</p>
-              <h2 class="text-primary-200 font-bold text-2xl">
+              <p class="text-lg font-medium text-primary-50">Âm nhạc</p>
+              <h2 class="text-2xl font-bold text-primary-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing.
               </h2>
               <p class="pb-4">
@@ -731,7 +731,7 @@
                 natus consequuntur provident excepturi delectus nisi
                 reprehenderit temporibus voluptates!
               </p>
-              <a href="#" class="text-accent-300 underline font-medium"
+              <a href="#" class="font-medium text-accent-300 underline"
                 >Khám phá thêm</a
               >
             </div>
@@ -740,37 +740,40 @@
       </section>
     </main>
 
-    <footer aria-label="Site Footer" class="bg-primary-200 hidden md:block w-full">
+    <footer
+      aria-label="Site Footer"
+      class="hidden w-full bg-primary-200 md:block"
+    >
       <div
-        class="max-w-screen-xl px-20 py-16 mx-auto space-y-8 sm:px-6 lg:space-y-16 lg:px-8 ml-16"
+        class="mx-auto ml-16 max-w-screen-xl space-y-8 px-20 py-16 sm:px-6 lg:space-y-16 lg:px-8"
       >
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div
-              class="text-secondary-100 font-extrabold tracking-tighter text-2xl"
+              class="text-2xl font-extrabold tracking-tighter text-secondary-100"
             >
               <h2>Ticketfast</h2>
             </div>
 
-            <p class="max-w-xs mt-4 text-secondary-350 text-sm font-light">
+            <p class="mt-4 max-w-xs text-sm font-light text-secondary-350">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
               cupiditate quae nam molestias.
             </p>
 
-            <ul class="flex gap-6 mt-8">
+            <ul class="mt-8 flex gap-6">
               <li
-                class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+                class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
               >
                 <a
                   href="/"
                   rel="noreferrer"
                   target="_blank"
-                  class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                  class="flex items-center text-secondary-200 transition hover:opacity-75"
                 >
                   <span class="sr-only">Facebook</span>
 
                   <svg
-                    class="w-6 h-6"
+                    class="h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -785,17 +788,17 @@
               </li>
 
               <li
-                class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+                class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
               >
                 <a
                   href="/"
                   rel="noreferrer"
                   target="_blank"
-                  class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                  class="flex items-center text-secondary-200 transition hover:opacity-75"
                 >
                   <span class="sr-only">Instagram</span>
                   <svg
-                    class="w-6 h-6"
+                    class="h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -810,18 +813,18 @@
               </li>
 
               <li
-                class="bg-primary-300 w-10 h-10 rounded-full flex justify-center"
+                class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
               >
                 <a
                   href="/"
                   rel="noreferrer"
                   target="_blank"
-                  class="text-secondary-200 transition hover:opacity-75 flex items-center"
+                  class="flex items-center text-secondary-200 transition hover:opacity-75"
                 >
                   <span class="sr-only">Twitter</span>
 
                   <svg
-                    class="w-6 h-6"
+                    class="h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -836,7 +839,7 @@
           </div>
 
           <div
-            class="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-3 mt-16 lg:mt-0"
+            class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-2 lg:mt-0 lg:grid-cols-3"
           >
             <div>
               <p class="font-medium text-secondary-100">Services</p>
@@ -968,31 +971,31 @@
       </div>
     </footer>
 
-    <footer class="bg-primary-200 py-12 space-y-14 md:hidden w-full ">
-      <div class="space-y-5 flex flex-col justify-center items-center">
+    <footer class="w-full space-y-14 bg-primary-200 py-12 md:hidden">
+      <div class="flex flex-col items-center justify-center space-y-5">
         <div
-          class="text-secondary-100 font-extrabold tracking-tighter text-2xl"
+          class="text-2xl font-extrabold tracking-tighter text-secondary-100"
         >
           <h2>Ticketfast</h2>
         </div>
 
-        <p class="max-w-xs mt-4 text-secondary-350 text-sm font-light">
+        <p class="mt-4 max-w-xs text-sm font-light text-secondary-350">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
           cupiditate quae nam molestias.
         </p>
 
-        <ul class="flex gap-6 mt-8">
-          <li class="bg-primary-300 w-10 h-10 rounded-full flex justify-center">
+        <ul class="mt-8 flex gap-6">
+          <li class="flex h-10 w-10 justify-center rounded-full bg-primary-300">
             <a
               href="/"
               rel="noreferrer"
               target="_blank"
-              class="text-secondary-200 transition hover:opacity-75 flex items-center"
+              class="flex items-center text-secondary-200 transition hover:opacity-75"
             >
               <span class="sr-only">Facebook</span>
 
               <svg
-                class="w-6 h-6"
+                class="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -1006,16 +1009,16 @@
             </a>
           </li>
 
-          <li class="bg-primary-300 w-10 h-10 rounded-full flex justify-center">
+          <li class="flex h-10 w-10 justify-center rounded-full bg-primary-300">
             <a
               href="/"
               rel="noreferrer"
               target="_blank"
-              class="text-secondary-200 transition hover:opacity-75 flex items-center"
+              class="flex items-center text-secondary-200 transition hover:opacity-75"
             >
               <span class="sr-only">Instagram</span>
               <svg
-                class="w-6 h-6"
+                class="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -1029,17 +1032,17 @@
             </a>
           </li>
 
-          <li class="bg-primary-300 w-10 h-10 rounded-full flex justify-center">
+          <li class="flex h-10 w-10 justify-center rounded-full bg-primary-300">
             <a
               href="/"
               rel="noreferrer"
               target="_blank"
-              class="text-secondary-200 transition hover:opacity-75 flex items-center"
+              class="flex items-center text-secondary-200 transition hover:opacity-75"
             >
               <span class="sr-only">Twitter</span>
 
               <svg
-                class="w-6 h-6"
+                class="h-6 w-6"
                 fill="currentColor"
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -1058,10 +1061,12 @@
         <div>
           <button
             id="accordion-btn"
-            class="h-20 w-full hover:bg-primary-100 duration-200 ease-linear flex justify-between items-center px-4 border-b border-primary-100"
+            class="flex h-20 w-full items-center justify-between border-b border-primary-100 px-4 duration-200 ease-linear hover:bg-primary-100"
           >
             <div>
-              <h2 class="font-semibold uppercase text-secondary-250">Âm nhạc</h2>
+              <h2 class="font-semibold uppercase text-secondary-250">
+                Âm nhạc
+              </h2>
             </div>
             <div>
               <svg
@@ -1082,7 +1087,7 @@
           </button>
           <div
             id="accordion-links"
-            class="flex flex-col space-y-3 py-3 pl-4 hidden text-primary-50"
+            class="flex hidden flex-col space-y-3 py-3 pl-4 text-primary-50"
           >
             <a href="#" class="link-hover-footer">Legend Concert</a>
             <a href="#" class="link-hover-footer">Chuyen Tinh</a>
@@ -1091,15 +1096,17 @@
             <a href="#" class="link-hover-footer">Bang Kieu</a>
           </div>
         </div>
-  
+
         <!-- !Accordion #2 -->
         <div>
           <button
             id="accordion-btn"
-            class="h-20 w-full hover:bg-primary-100 duration-200 ease-linear flex justify-between items-center px-4 border-b border-primary-100"
+            class="flex h-20 w-full items-center justify-between border-b border-primary-100 px-4 duration-200 ease-linear hover:bg-primary-100"
           >
             <div>
-              <h2 class="font-semibold uppercase text-secondary-250">Truyền hình</h2>
+              <h2 class="font-semibold uppercase text-secondary-250">
+                Truyền hình
+              </h2>
             </div>
             <div>
               <svg
@@ -1120,7 +1127,7 @@
           </button>
           <div
             id="accordionLinks"
-            class="flex flex-col space-y-3 py-3 pl-4 hidden text-primary-50"
+            class="flex hidden flex-col space-y-3 py-3 pl-4 text-primary-50"
           >
             <a href="#" class="link-hover-footer">Legend Concert</a>
             <a href="#" class="link-hover-footer">Chuyen Tinh</a>
@@ -1129,15 +1136,17 @@
             <a href="#" class="link-hover-footer">Bang Kieu</a>
           </div>
         </div>
-  
+
         <!-- !Accordion #3 -->
         <div>
           <button
             id="accordion-btn"
-            class="h-20 w-full hover:bg-primary-100 duration-200 ease-linear flex justify-between items-center px-4 border-b border-primary-100"
+            class="flex h-20 w-full items-center justify-between border-b border-primary-100 px-4 duration-200 ease-linear hover:bg-primary-100"
           >
             <div>
-              <h2 class="font-semibold uppercase text-secondary-250">Sự Kiện</h2>
+              <h2 class="font-semibold uppercase text-secondary-250">
+                Sự Kiện
+              </h2>
             </div>
             <div>
               <svg
@@ -1158,7 +1167,7 @@
           </button>
           <div
             id="accordionLinks"
-            class="flex flex-col space-y-3 py-3 pl-4 hidden text-primary-50"
+            class="flex hidden flex-col space-y-3 py-3 pl-4 text-primary-50"
           >
             <a href="#" class="link-hover-footer">Legend Concert</a>
             <a href="#" class="link-hover-footer">Chuyen Tinh</a>
