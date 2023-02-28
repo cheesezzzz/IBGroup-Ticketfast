@@ -648,8 +648,8 @@ video {
   left: 0px;
 }
 
-.left-10{
-  left: 2.5rem;
+.left-3{
+  left: 0.75rem;
 }
 
 .right-0{
@@ -660,20 +660,16 @@ video {
   top: 0px;
 }
 
-.top-24{
-  top: 6rem;
+.top-20{
+  top: 5rem;
 }
 
 .top-4{
   top: 1rem;
 }
 
-.left-2{
-  left: 0.5rem;
-}
-
-.left-3{
-  left: 0.75rem;
+.top-16{
+  top: 4rem;
 }
 
 .isolate{
@@ -730,6 +726,14 @@ video {
 
 .m-0{
   margin: 0px;
+}
+
+.m-1{
+  margin: 0.25rem;
+}
+
+.m-10{
+  margin: 2.5rem;
 }
 
 .mx-20{
@@ -886,6 +890,10 @@ video {
   display: none;
 }
 
+.h-1{
+  height: 0.25rem;
+}
+
 .h-10{
   height: 2.5rem;
 }
@@ -896,10 +904,6 @@ video {
 
 .h-12{
   height: 3rem;
-}
-
-.h-16{
-  height: 4rem;
 }
 
 .h-2{
@@ -967,12 +971,12 @@ video {
   min-height: 100%;
 }
 
-.w-10{
-  width: 2.5rem;
+.w-1{
+  width: 0.25rem;
 }
 
-.w-16{
-  width: 4rem;
+.w-10{
+  width: 2.5rem;
 }
 
 .w-20{
@@ -1021,15 +1025,6 @@ video {
 
 .w-full{
   width: 100%;
-}
-
-.w-fit{
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.w-12{
-  width: 3rem;
 }
 
 .min-w-full{
@@ -1100,18 +1095,6 @@ video {
 
 .translate-y-0{
   --tw-translate-y: 0px;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-95{
-  --tw-scale-x: .95;
-  --tw-scale-y: .95;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.scale-75{
-  --tw-scale-x: .75;
-  --tw-scale-y: .75;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -2258,6 +2241,10 @@ video {
   padding: 0px;
 }
 
+.p-1{
+  padding: 0.25rem;
+}
+
 .p-16{
   padding: 4rem;
 }
@@ -2345,6 +2332,10 @@ video {
   padding-left: 0.5rem;
 }
 
+.pl-28{
+  padding-left: 7rem;
+}
+
 .pl-3{
   padding-left: 0.75rem;
 }
@@ -2353,24 +2344,12 @@ video {
   padding-left: 1rem;
 }
 
-.pl-40{
-  padding-left: 10rem;
-}
-
-.pt-48{
-  padding-top: 12rem;
-}
-
 .pr-2{
   padding-right: 0.5rem;
 }
 
-.pl-20{
-  padding-left: 5rem;
-}
-
-.pl-28{
-  padding-left: 7rem;
+.pt-48{
+  padding-top: 12rem;
 }
 
 .text-left{
@@ -2453,14 +2432,14 @@ video {
   line-height: 1.25rem;
 }
 
-.text-xs{
-  font-size: 0.75rem;
-  line-height: 1rem;
-}
-
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
+}
+
+.text-xs{
+  font-size: 0.75rem;
+  line-height: 1rem;
 }
 
 .font-bold{
@@ -3011,6 +2990,10 @@ video {
   content: var(--tw-content);
 }
 
+.\[a-zA-Z-\:\#\]{
+  a-z-a--z-: #;
+}
+
 @media (min-width: 640px){
   .sm\:container{
     width: 100%;
@@ -3045,26 +3028,6 @@ video {
       max-width: 1536px;
     }
   }
-}
-
-.placeholder\:text-2xl::-moz-placeholder{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.placeholder\:text-2xl::placeholder{
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.placeholder\:text-xl::-moz-placeholder{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.placeholder\:text-xl::placeholder{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
 }
 
 .placeholder\:text-primary-50::-moz-placeholder{
@@ -3189,24 +3152,18 @@ video {
     left: 2.5rem;
   }
 
-  .sm\:scale-100{
-    --tw-scale-x: 1;
-    --tw-scale-y: 1;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-  }
-
   .sm\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .sm\:px-6{
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .sm\:px-20{
     padding-left: 5rem;
     padding-right: 5rem;
+  }
+
+  .sm\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .sm\:pl-40{
@@ -3250,29 +3207,9 @@ video {
     display: none;
   }
 
-  .md\:px-20{
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
-  }
-
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .placeholder\:md\:text-2xl::-moz-placeholder{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-
-  .placeholder\:md\:text-2xl::placeholder{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
