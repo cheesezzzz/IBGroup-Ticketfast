@@ -2,71 +2,48 @@ const btnHamburger = document.querySelector("#hamburger-btn");
 const btnCloseMenu = document.querySelector("#menuClose");
 const menuSlider = document.querySelector("#menu-slider");
 const accordionBtn = document.querySelectorAll("#accordion-btn");
-const accordionLinks = document.querySelectorAll("#accordion-links");
 const dropdownCategoryDetail = document.querySelector('#dropdown-category--detail')
 const dropdownProfileDetail = document.querySelector('#dropdown-profile--detail')
-const dropdownButton = document.querySelector('#dropdown-button')
 const searchSlideIn = document.querySelector("#search-slidein")
 const searchBtn = document.querySelector('#search-btn')
 const body = document.querySelector("#body");
 
-// TODO HELP: How should I abstract/refactor the overall code so theres only one function for dropdown menus?
+// Function to toggle dropdown visibility
+function toggleDropdown(button, detail) {
+  button.addEventListener('click', (e) => {
+    detail.classList.toggle('opacity-0')
+    detail.classList.toggle('opacity-1')
+    detail.classList.remove('invisible')
+    detail.classList.toggle('translate-y-0')
 
-// !Category Dropdown 
-document.addEventListener('click', (e) => {
-  const isDropdownButton = e.target.closest('#dropdown-button')
+    e.stopPropagation();
+  });
 
-  if(isDropdownButton) {
-    dropdownCategoryDetail.classList.toggle('opacity-0')
-    dropdownCategoryDetail.classList.toggle('opacity-1')
-    dropdownCategoryDetail.classList.remove('invisible')
-    dropdownCategoryDetail.classList.toggle('translate-y-0')
-  }
-  if(!isDropdownButton) {
-    dropdownCategoryDetail.classList.add('opacity-0')
-    dropdownProfileDetail.classList.add('invisible')
+  document.addEventListener('click', () => {
+    detail.classList.add('opacity-0')
+    detail.classList.add('invisible')
+  });
+}
 
-  }
-})
+// Category Dropdown 
+const dropdownButton = document.querySelector('#dropdown-button')
+toggleDropdown(dropdownButton, dropdownCategoryDetail);
 
-////////////////////////////////////////////////////////////////////
-// !Profile Dropdown
-document.addEventListener('click', (e) => {
-  const isDropdownButton = e.target.closest('#dropdown-button--profile')
+// Profile Dropdown
+const dropdownButtonProfile = document.querySelector('#dropdown-button--profile')
+toggleDropdown(dropdownButtonProfile, dropdownProfileDetail);
 
-
-  // Dropdown opens when user clicks on an element with the closest parent element of the id #dropdown-button--profile
-  if(isDropdownButton) {
-    dropdownProfileDetail.classList.toggle('opacity-0')
-    dropdownProfileDetail.classList.toggle('opacity-1')
-    dropdownProfileDetail.classList.remove('invisible')
-    dropdownProfileDetail.classList.toggle('translate-y-0')
-  }
-
-  // Dropdown closes when users click outside of the closest mentioned parent element
-  if(!isDropdownButton) {
-    dropdownProfileDetail.classList.add('opacity-0')
-    dropdownProfileDetail.classList.add('invisible')
-  }
-})
-
-
-////////////////////////////////////////////////
-// !Menu Navigation
-// Displaying Menu Navigation Slider Function
+// Menu Navigation
 const showNavigation = function () {
   menuSlider.classList.remove("-translate-x-full");
   body.classList.add("overflow-hidden");
-  document.style
 };
 
-// Closing the Menu Navigation Slider Function
 const closeNavigation = function () {
   menuSlider.classList.add("-translate-x-full");
   body.classList.remove("overflow-hidden");
 };
 
-// Hamburger click event to open menu navigation slider
 btnHamburger.addEventListener("click", function () {
   if (menuSlider.classList.contains("-translate-x-full")) {
     showNavigation();
@@ -75,29 +52,26 @@ btnHamburger.addEventListener("click", function () {
   }
 });
 
-// Close menu navigation slider via button in the slider
 btnCloseMenu.addEventListener("click", () => {
   closeNavigation();
 });
 
-// Closing the menu navigation slider when clicking outside 
-//TODO HELP: I need help with closing the navigation when clicking outside 
+// TODO HELP: I am not sure how to implement functionality where the menu would close when clicking outside
 // document.addEventListener('click', (e) => {
-//   if(e.target.id !== 'menu-slider' && e.target.id !== "menuClose") {
+//   if(e.target.id !== 'menu-slider' && e.target.id !== "menuClose" && !menuSlider.contains(e.target)) {
 //     closeNavigation();
 //   }
-// })
+// });
 
-///////////////////////////////////////////////////////////
-// !Accordion Drop Down
-Array.from(accordionBtn).forEach((e) => {
-  e.addEventListener("click", () => {
-    e.nextElementSibling.classList.toggle("hidden");
+// Accordion Drop Down
+Array.from(accordionBtn).forEach((button) => {
+  button.addEventListener("click", () => {
+    const links = button.nextElementSibling;
+    links.classList.toggle("hidden");
   });
 });
 
-//////////////////////////////////////////////////////////
-// !Search slide in
+// Search slide in
 searchBtn.addEventListener('click', function() {
   searchSlideIn.classList.toggle('max-h-44')
-})
+});
