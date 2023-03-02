@@ -278,19 +278,6 @@ Correct the cursor style of increment and decrement buttons in Safari.
 /*
 Remove the inner padding in Chrome and Safari on macOS.
 */
-::-webkit-search-cancel-button{
-    padding-right: 40px; 
-
-    -webkit-appearance: none;
-    transform: scale(3);
-    height: 20px;
-    width: 20px;
-    border-radius:10px;
-    cursor: pointer;
-    background: url('https://api.iconify.design/basil/cross-outline.svg?color=%23b0b0b0&width=48&height=48') no-repeat center center / contain;
-
-
-}
 
 ::-webkit-search-decoration {
   -webkit-appearance: none;
