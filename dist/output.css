@@ -278,6 +278,19 @@ Correct the cursor style of increment and decrement buttons in Safari.
 /*
 Remove the inner padding in Chrome and Safari on macOS.
 */
+::-webkit-search-cancel-button{
+    padding-right: 40px; 
+
+    -webkit-appearance: none;
+    transform: scale(3);
+    height: 20px;
+    width: 20px;
+    border-radius:10px;
+    cursor: pointer;
+    background: url('https://api.iconify.design/basil/cross-outline.svg?color=%23b0b0b0&width=48&height=48') no-repeat center center / contain;
+
+
+}
 
 ::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -742,6 +755,11 @@ video {
   margin-right: auto;
 }
 
+.mx-16{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
 .mb-10{
   margin-bottom: 2.5rem;
 }
@@ -983,6 +1001,14 @@ video {
   height: 50vh;
 }
 
+.h-\[35vh\]{
+  height: 35vh;
+}
+
+.h-\[30vh\]{
+  height: 30vh;
+}
+
 .max-h-0{
   max-height: 0px;
 }
@@ -1049,6 +1075,18 @@ video {
 
 .w-full{
   width: 100%;
+}
+
+.w-\[80vw\]{
+  width: 80vw;
+}
+
+.w-\[90\]{
+  width: 90;
+}
+
+.w-\[90vw\]{
+  width: 90vw;
 }
 
 .min-w-full{
@@ -1960,6 +1998,14 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-xl{
+  border-radius: 0.75rem;
+}
+
+.rounded-2xl{
+  border-radius: 1rem;
+}
+
 .rounded-b{
   border-bottom-right-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
@@ -2291,6 +2337,10 @@ video {
   padding: 1rem;
 }
 
+.p-20{
+  padding: 5rem;
+}
+
 .px-2{
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2346,6 +2396,21 @@ video {
   padding-bottom: 2rem;
 }
 
+.px-40{
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.px-10{
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .pb-10{
   padding-bottom: 2.5rem;
 }
@@ -2380,6 +2445,18 @@ video {
 
 .pt-48{
   padding-top: 12rem;
+}
+
+.pt-2{
+  padding-top: 0.5rem;
+}
+
+.pt-6{
+  padding-top: 1.5rem;
+}
+
+.pt-8{
+  padding-top: 2rem;
 }
 
 .text-left{
