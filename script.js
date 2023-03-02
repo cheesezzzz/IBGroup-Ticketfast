@@ -6,6 +6,8 @@ const dropdownCategoryDetail = document.querySelector('#dropdown-category--detai
 const dropdownProfileDetail = document.querySelector('#dropdown-profile--detail')
 const searchSlideIn = document.querySelector("#search-slidein")
 const searchBtn = document.querySelector('#search-btn')
+const header = document.querySelector("#header")
+const announcementBtn = document.querySelector("#announcement-btn")
 const body = document.querySelector("#body");
 
 // Function to toggle dropdown visibility
@@ -24,6 +26,12 @@ function toggleDropdown(button, detail) {
     detail.classList.add('invisible')
   });
 }
+
+// Button to close the annoucement header
+announcementBtn.addEventListener('click', () => {
+  header.classList.add('hidden')
+})
+
 
 // Category Dropdown 
 const dropdownButton = document.querySelector('#dropdown-button')

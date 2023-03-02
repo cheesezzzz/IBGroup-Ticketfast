@@ -8,9 +8,10 @@
     <script defer src="script.js"></script>
     <title>Tieu the loai</title>
   </head>
-  <body>
+  <body id="body" class="m-0 overflow-x-hidden p-0 font-inter tracking-tight">
     <!-- !Announcement Header -->
     <header
+      id="header"
       class="flex h-12 w-full items-center justify-center space-y-1 space-x-2 bg-accent-400 px-20 py-8 lg:flex-row lg:space-y-0"
     >
       <p
@@ -19,6 +20,7 @@
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
       </p>
       <button
+        id="announcement-btn"
         class="h-7 w-7 rounded-full bg-primary-200 px-2 text-secondary-100"
       >
         <p class="text-sm font-extralight">X</p>
@@ -463,8 +465,9 @@
       </div>
     </div>
 
+
     <!-- !MAIN CONTENT WRAPPER -->
-    <div class="wrapper px-6">
+    <div class="wrapper px-8">
       <!-- !Hero Section w/ Breadcrumbs -->
       <section class="pt-8">
         <div
@@ -531,15 +534,587 @@
         </div>
       </section>
 
-      <!--  -->
-      <main>
-        <div>
-
+      <!-- !Ticket Section -->
+      <main class="mt-12 space-y-5">
+        <!-- Heading -->
+        <div class="mb-10 text-4xl">
+          <h2 class="font-bold">Sự kiện đặc sắc</h2>
+          <p class="mt-3 h-2 w-24 rounded-full bg-accent-200"></p>
         </div>
-        <div>
+        <div class="grid grid-cols-12">
+          <div
+            class="col-span-9 h-fit w-full rounded-xl border border-stroke shadow-lg"
+          >
+            <!-- Header -->
+            <div class="h-16 w-full rounded-t-xl bg-secondary-200 flex items-center justify-between px-6">
+                <p># Sự kiện sắp tới</p>
+                <p class="flex">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="#81a648" d="M12 12q.825 0 1.413-.588T14 10q0-.825-.588-1.413T12 8q-.825 0-1.413.588T10 10q0 .825.588 1.413T12 12Zm0 7.35q3.05-2.8 4.525-5.088T18 10.2q0-2.725-1.738-4.462T12 4Q9.475 4 7.737 5.738T6 10.2q0 1.775 1.475 4.063T12 19.35ZM12 22q-4.025-3.425-6.012-6.362T4 10.2q0-3.75 2.413-5.975T12 2q3.175 0 5.588 2.225T20 10.2q0 2.5-1.988 5.438T12 22Zm0-11.8Z"/></svg>
+                  Hanoi, Vietnam
+                </p>
+            </div>
+            <div class="bg-primary-100 w-full px-2 h-8 flex justify-center items-center text-secondary-250 font-bold">
+              <p>16 Tháng 2, 2023</p>
+            </div>
+            
 
+            <!-- Ticket Content Wrapper -->
+            <div class="px-5 pt-8">
+              
+              <!--! Card Wrapper-->
+              <div class="pt-4">
+
+                <!-- Card -->
+                <div class="w-full flex border-b border-secondary-200  items-center space-x-11 py-8">
+                  <!-- img -->
+                  <div class="w-72">
+                    <img class="rounded-md" src="https://images.unsplash.com/photo-1600119692885-8b04faa7f329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
+                  </div>
+                  <!-- main content -->
+                  <div class="space-y-1">
+                    <p class="text-secondary-350 font-medium">Thứ Sáu, 12:00pm</p>
+                    <h2 class="font-semibold text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+                    <p class="text-secondary-350 font-medium">Hanoi Opera House</p>
+                  </div>
+                  <!-- btns -->
+
+                  <div class="flex space-x-5 pr-5">
+                    <button class="w-32 h-10 rounded-full bg-accent-300 text-secondary-100">Mua vé</button>
+                    <button class="w-10 h-10 rounded-full bg-secondary-200 flex justify-center items-center">
+                      <svg width="20" height="17" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 19.8749L12.5175 20.8739C12.3576 20.9568 12.1801 21 12 21C11.8199 21 11.6424 20.9568 11.4825 20.8739L11.4705 20.8679L11.4435 20.8529C11.2864 20.7718 11.1314 20.6868 10.9785 20.5979C9.15028 19.5574 7.42547 18.345 5.8275 16.9769C3.0675 14.5964 0 11.0249 0 6.74994C0 2.75394 3.129 -6.10352e-05 6.375 -6.10352e-05C8.6955 -6.10352e-05 10.7295 1.20294 12 3.02994C13.2705 1.20294 15.3045 -6.10352e-05 17.625 -6.10352e-05C20.871 -6.10352e-05 24 2.75394 24 6.74994C24 11.0249 20.9325 14.5964 18.1725 16.9769C16.439 18.459 14.557 19.7579 12.5565 20.8529L12.5295 20.8679L12.5205 20.8724H12.5175L12 19.8749ZM6.375 2.24994C4.371 2.24994 2.25 3.99594 2.25 6.74994C2.25 9.97494 4.62 12.9659 7.2975 15.2729C8.75832 16.5224 10.3327 17.6328 12 18.5894C13.6673 17.6328 15.2417 16.5224 16.7025 15.2729C19.38 12.9659 21.75 9.97494 21.75 6.74994C21.75 3.99594 19.629 2.24994 17.625 2.24994C15.5655 2.24994 13.7115 3.72894 13.0815 5.93394C13.0152 6.1697 12.8736 6.37733 12.6784 6.52521C12.4831 6.67309 12.2449 6.75312 12 6.75312C11.7551 6.75312 11.5169 6.67309 11.3216 6.52521C11.1264 6.37733 10.9848 6.1697 10.9185 5.93394C10.2885 3.72894 8.4345 2.24994 6.375 2.24994Z" fill="black"/>
+                        </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card -->
+                <div class="w-full flex border-b border-secondary-200  items-center space-x-11 py-8">
+                  <!-- img -->
+                  <div class="w-72">
+                    <img class="rounded-md" src="https://images.unsplash.com/photo-1600119692885-8b04faa7f329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
+                  </div>
+                  <!-- main content -->
+                  <div class="space-y-1">
+                    <p class="text-secondary-350 font-medium">Thứ Sáu, 12:00pm</p>
+                    <h2 class="font-semibold text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+                    <p class="text-secondary-350 font-medium">Hanoi Opera House</p>
+                  </div>
+                  <!-- btns -->
+
+                  <div class="flex space-x-5 pr-5">
+                    <button class="w-32 h-10 rounded-full bg-accent-300 text-secondary-100">Mua vé</button>
+                    <button class="w-10 h-10 rounded-full bg-secondary-200 flex justify-center items-center">
+                      <svg width="20" height="17" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 19.8749L12.5175 20.8739C12.3576 20.9568 12.1801 21 12 21C11.8199 21 11.6424 20.9568 11.4825 20.8739L11.4705 20.8679L11.4435 20.8529C11.2864 20.7718 11.1314 20.6868 10.9785 20.5979C9.15028 19.5574 7.42547 18.345 5.8275 16.9769C3.0675 14.5964 0 11.0249 0 6.74994C0 2.75394 3.129 -6.10352e-05 6.375 -6.10352e-05C8.6955 -6.10352e-05 10.7295 1.20294 12 3.02994C13.2705 1.20294 15.3045 -6.10352e-05 17.625 -6.10352e-05C20.871 -6.10352e-05 24 2.75394 24 6.74994C24 11.0249 20.9325 14.5964 18.1725 16.9769C16.439 18.459 14.557 19.7579 12.5565 20.8529L12.5295 20.8679L12.5205 20.8724H12.5175L12 19.8749ZM6.375 2.24994C4.371 2.24994 2.25 3.99594 2.25 6.74994C2.25 9.97494 4.62 12.9659 7.2975 15.2729C8.75832 16.5224 10.3327 17.6328 12 18.5894C13.6673 17.6328 15.2417 16.5224 16.7025 15.2729C19.38 12.9659 21.75 9.97494 21.75 6.74994C21.75 3.99594 19.629 2.24994 17.625 2.24994C15.5655 2.24994 13.7115 3.72894 13.0815 5.93394C13.0152 6.1697 12.8736 6.37733 12.6784 6.52521C12.4831 6.67309 12.2449 6.75312 12 6.75312C11.7551 6.75312 11.5169 6.67309 11.3216 6.52521C11.1264 6.37733 10.9848 6.1697 10.9185 5.93394C10.2885 3.72894 8.4345 2.24994 6.375 2.24994Z" fill="black"/>
+                        </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card -->
+                <div class="w-full flex border-b border-secondary-200  items-center space-x-11 py-8">
+                  <!-- img -->
+                  <div class="w-72">
+                    <img class="rounded-md" src="https://images.unsplash.com/photo-1600119692885-8b04faa7f329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
+                  </div>
+                  <!-- main content -->
+                  <div class="space-y-1">
+                    <p class="text-secondary-350 font-medium">Thứ Sáu, 12:00pm</p>
+                    <h2 class="font-semibold text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+                    <p class="text-secondary-350 font-medium">Hanoi Opera House</p>
+                  </div>
+                  <!-- btns -->
+
+                  <div class="flex space-x-5 pr-5">
+                    <button class="w-32 h-10 rounded-full bg-accent-300 text-secondary-100">Mua vé</button>
+                    <button class="w-10 h-10 rounded-full bg-secondary-200 flex justify-center items-center">
+                      <svg width="20" height="17" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 19.8749L12.5175 20.8739C12.3576 20.9568 12.1801 21 12 21C11.8199 21 11.6424 20.9568 11.4825 20.8739L11.4705 20.8679L11.4435 20.8529C11.2864 20.7718 11.1314 20.6868 10.9785 20.5979C9.15028 19.5574 7.42547 18.345 5.8275 16.9769C3.0675 14.5964 0 11.0249 0 6.74994C0 2.75394 3.129 -6.10352e-05 6.375 -6.10352e-05C8.6955 -6.10352e-05 10.7295 1.20294 12 3.02994C13.2705 1.20294 15.3045 -6.10352e-05 17.625 -6.10352e-05C20.871 -6.10352e-05 24 2.75394 24 6.74994C24 11.0249 20.9325 14.5964 18.1725 16.9769C16.439 18.459 14.557 19.7579 12.5565 20.8529L12.5295 20.8679L12.5205 20.8724H12.5175L12 19.8749ZM6.375 2.24994C4.371 2.24994 2.25 3.99594 2.25 6.74994C2.25 9.97494 4.62 12.9659 7.2975 15.2729C8.75832 16.5224 10.3327 17.6328 12 18.5894C13.6673 17.6328 15.2417 16.5224 16.7025 15.2729C19.38 12.9659 21.75 9.97494 21.75 6.74994C21.75 3.99594 19.629 2.24994 17.625 2.24994C15.5655 2.24994 13.7115 3.72894 13.0815 5.93394C13.0152 6.1697 12.8736 6.37733 12.6784 6.52521C12.4831 6.67309 12.2449 6.75312 12 6.75312C11.7551 6.75312 11.5169 6.67309 11.3216 6.52521C11.1264 6.37733 10.9848 6.1697 10.9185 5.93394C10.2885 3.72894 8.4345 2.24994 6.375 2.24994Z" fill="black"/>
+                        </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Card -->
+                <div class="w-full flex border-b border-secondary-200  items-center space-x-11 py-8">
+                  <!-- img -->
+                  <div class="w-72">
+                    <img class="rounded-md" src="https://images.unsplash.com/photo-1600119692885-8b04faa7f329?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
+                  </div>
+                  <!-- main content -->
+                  <div class="space-y-1">
+                    <p class="text-secondary-350 font-medium">Thứ Sáu, 12:00pm</p>
+                    <h2 class="font-semibold text-2xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h2>
+                    <p class="text-secondary-350 font-medium">Hanoi Opera House</p>
+                  </div>
+                  <!-- btns -->
+
+                  <div class="flex space-x-5 pr-5">
+                    <button class="w-32 h-10 rounded-full bg-accent-300 text-secondary-100">Mua vé</button>
+                    <button class="w-10 h-10 rounded-full bg-secondary-200 flex justify-center items-center">
+                      <svg width="20" height="17" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 19.8749L12.5175 20.8739C12.3576 20.9568 12.1801 21 12 21C11.8199 21 11.6424 20.9568 11.4825 20.8739L11.4705 20.8679L11.4435 20.8529C11.2864 20.7718 11.1314 20.6868 10.9785 20.5979C9.15028 19.5574 7.42547 18.345 5.8275 16.9769C3.0675 14.5964 0 11.0249 0 6.74994C0 2.75394 3.129 -6.10352e-05 6.375 -6.10352e-05C8.6955 -6.10352e-05 10.7295 1.20294 12 3.02994C13.2705 1.20294 15.3045 -6.10352e-05 17.625 -6.10352e-05C20.871 -6.10352e-05 24 2.75394 24 6.74994C24 11.0249 20.9325 14.5964 18.1725 16.9769C16.439 18.459 14.557 19.7579 12.5565 20.8529L12.5295 20.8679L12.5205 20.8724H12.5175L12 19.8749ZM6.375 2.24994C4.371 2.24994 2.25 3.99594 2.25 6.74994C2.25 9.97494 4.62 12.9659 7.2975 15.2729C8.75832 16.5224 10.3327 17.6328 12 18.5894C13.6673 17.6328 15.2417 16.5224 16.7025 15.2729C19.38 12.9659 21.75 9.97494 21.75 6.74994C21.75 3.99594 19.629 2.24994 17.625 2.24994C15.5655 2.24994 13.7115 3.72894 13.0815 5.93394C13.0152 6.1697 12.8736 6.37733 12.6784 6.52521C12.4831 6.67309 12.2449 6.75312 12 6.75312C11.7551 6.75312 11.5169 6.67309 11.3216 6.52521C11.1264 6.37733 10.9848 6.1697 10.9185 5.93394C10.2885 3.72894 8.4345 2.24994 6.375 2.24994Z" fill="black"/>
+                        </svg>
+                    </button>
+                  </div>
+                </div>
+
+              </div>
+
+              <button>
+              
+              </button>
+            </div>
+
+           
+            </div>
+          </div>
+
+         
         </div>
       </main>
     </div>
+
+    <!-- !Desktop Footer -->
+    <footer
+      aria-label="Site Footer"
+      class="hidden w-full bg-primary-200 md:block"
+    >
+      <div
+        class="mx-auto ml-16 max-w-screen-xl space-y-8 px-20 py-16 sm:px-6 lg:space-y-16 lg:px-8"
+      >
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div
+              class="text-2xl font-extrabold tracking-tighter text-secondary-100"
+            >
+              <h2>Ticketfast</h2>
+            </div>
+
+            <p class="mt-4 max-w-xs text-sm font-light text-secondary-350">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
+              cupiditate quae nam molestias.
+            </p>
+
+            <ul class="mt-8 flex gap-6">
+              <li
+                class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
+              >
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="flex items-center text-secondary-200 transition hover:opacity-75"
+                >
+                  <span class="sr-only">Facebook</span>
+
+                  <svg
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li
+                class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
+              >
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="flex items-center text-secondary-200 transition hover:opacity-75"
+                >
+                  <span class="sr-only">Instagram</span>
+                  <svg
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </a>
+              </li>
+
+              <li
+                class="flex h-10 w-10 justify-center rounded-full bg-primary-300"
+              >
+                <a
+                  href="/"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="flex items-center text-secondary-200 transition hover:opacity-75"
+                >
+                  <span class="sr-only">Twitter</span>
+
+                  <svg
+                    class="h-6 w-6"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                    />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div
+            class="mt-16 grid grid-cols-1 gap-12 sm:grid-cols-2 lg:col-span-2 lg:mt-0 lg:grid-cols-3"
+          >
+            <div>
+              <p class="font-medium text-secondary-100">Services</p>
+
+              <nav class="mt-6">
+                <ul class="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      1on1 Coaching
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Company Review
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Accounts Review
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      HR Consulting
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      SEO Optimisation
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <p class="font-medium text-secondary-100">Company</p>
+              <nav aria-label="Footer Navigation - Company" class="mt-6">
+                <ul class="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      About
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Meet the Team
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Accounts Review
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+
+            <div>
+              <p class="font-medium text-secondary-100">Helpful Links</p>
+
+              <nav aria-label="Footer Navigation - Company" class="mt-6">
+                <ul class="space-y-4 text-sm">
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Contact
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      FAQs
+                    </a>
+                  </li>
+
+                  <li>
+                    <a
+                      href="#"
+                      class="text-secondary-350 transition hover:opacity-75"
+                    >
+                      Live Chat
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-xs text-secondary-350">
+          &copy; 2022. Company Name. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- !Mobile Footer -->
+    <footer class="w-full space-y-14 bg-primary-200 py-12 md:hidden">
+      <div class="flex flex-col items-center justify-center space-y-5">
+        <div
+          class="text-2xl font-extrabold tracking-tighter text-secondary-100"
+        >
+          <h2>Ticketfast</h2>
+        </div>
+
+        <p class="mt-4 max-w-xs text-sm font-light text-secondary-350 text-center">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse non
+          cupiditate quae nam molestias.
+        </p>
+
+        <ul class="mt-8 flex gap-6">
+          <li class="flex h-10 w-10 justify-center rounded-full bg-primary-300">
+            <a
+              href="/"
+              rel="noreferrer"
+              target="_blank"
+              class="flex items-center text-secondary-200 transition hover:opacity-75"
+            >
+              <span class="sr-only">Facebook</span>
+
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <li class="flex h-10 w-10 justify-center rounded-full bg-primary-300">
+            <a
+              href="/"
+              rel="noreferrer"
+              target="_blank"
+              class="flex items-center text-secondary-200 transition hover:opacity-75"
+            >
+              <span class="sr-only">Instagram</span>
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </li>
+
+          <li class="flex h-10 w-10 justify-center rounded-full bg-primary-300">
+            <a
+              href="/"
+              rel="noreferrer"
+              target="_blank"
+              class="flex items-center text-secondary-200 transition hover:opacity-75"
+            >
+              <span class="sr-only">Twitter</span>
+
+              <svg
+                class="h-6 w-6"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="px-4">
+        <!-- !Accordion #1 -->
+        <div>
+          <button
+            id="accordion-btn"
+            class="flex h-20 w-full items-center justify-between border-b border-primary-100 px-4 duration-200 ease-linear hover:bg-primary-100"
+          >
+            <div>
+              <h2 class="font-semibold uppercase text-secondary-250">
+                Âm nhạc
+              </h2>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                class="text-secondary-200"
+              >
+                <g transform="rotate(-90 12 12)">
+                  <path
+                    fill="currentColor"
+                    d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <div
+            id="accordion-links"
+            class="flex hidden flex-col space-y-3 py-3 pl-4 text-primary-50"
+          >
+            <a href="#" class="link-hover-footer">Legend Concert</a>
+            <a href="#" class="link-hover-footer">Chuyen Tinh</a>
+            <a href="#" class="link-hover-footer">Dem Tinh Nhan</a>
+            <a href="#" class="link-hover-footer">Livestorm</a>
+            <a href="#" class="link-hover-footer">Bang Kieu</a>
+          </div>
+        </div>
+
+        <!-- !Accordion #2 -->
+        <div>
+          <button
+            id="accordion-btn"
+            class="flex h-20 w-full items-center justify-between border-b border-primary-100 px-4 duration-200 ease-linear hover:bg-primary-100"
+          >
+            <div>
+              <h2 class="font-semibold uppercase text-secondary-250">
+                Truyền hình
+              </h2>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                class="text-secondary-200"
+              >
+                <g transform="rotate(-90 12 12)">
+                  <path
+                    fill="currentColor"
+                    d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <div
+            id="accordionLinks"
+            class="flex hidden flex-col space-y-3 py-3 pl-4 text-primary-50"
+          >
+            <a href="#" class="link-hover-footer">Legend Concert</a>
+            <a href="#" class="link-hover-footer">Chuyen Tinh</a>
+            <a href="#" class="link-hover-footer">Dem Tinh Nhan</a>
+            <a href="#" class="link-hover-footer">Livestorm</a>
+            <a href="#" class="link-hover-footer">Bang Kieu</a>
+          </div>
+        </div>
+
+        <!-- !Accordion #3 -->
+        <div>
+          <button
+            id="accordion-btn"
+            class="flex h-20 w-full items-center justify-between border-b border-primary-100 px-4 duration-200 ease-linear hover:bg-primary-100"
+          >
+            <div>
+              <h2 class="font-semibold uppercase text-secondary-250">
+                Sự Kiện
+              </h2>
+            </div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 24 24"
+                class="text-secondary-200"
+              >
+                <g transform="rotate(-90 12 12)">
+                  <path
+                    fill="currentColor"
+                    d="M15.125 21.1L6.7 12.7q-.15-.15-.213-.325T6.425 12q0-.2.062-.375T6.7 11.3l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.863t-.375.887q-.375.375-.875.375t-.875-.375Z"
+                  />
+                </g>
+              </svg>
+            </div>
+          </button>
+          <div
+            id="accordionLinks"
+            class="flex hidden flex-col space-y-3 py-3 pl-4 text-primary-50"
+          >
+            <a href="#" class="link-hover-footer">Legend Concert</a>
+            <a href="#" class="link-hover-footer">Chuyen Tinh</a>
+            <a href="#" class="link-hover-footer">Dem Tinh Nhan</a>
+            <a href="#" class="link-hover-footer">Livestorm</a>
+            <a href="#" class="link-hover-footer">Bang Kieu</a>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
