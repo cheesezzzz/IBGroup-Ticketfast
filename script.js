@@ -4,6 +4,7 @@ const menuSlider = document.querySelector("#menu-slider");
 const accordionBtn = document.querySelectorAll("#accordion-btn");
 const dropdownCategoryDetail = document.querySelector('#dropdown-category--detail')
 const dropdownProfileDetail = document.querySelector('#dropdown-profile--detail')
+const dropdownCategoryFilterDetail = document.querySelector('#dropdown-categoryfilter--detail')
 const searchSlideIn = document.querySelector("#search-slidein")
 const searchBtn = document.querySelector('#search-btn')
 const header = document.querySelector("#header")
@@ -40,6 +41,11 @@ toggleDropdown(dropdownButton, dropdownCategoryDetail);
 // Profile Dropdown
 const dropdownButtonProfile = document.querySelector('#dropdown-button--profile')
 toggleDropdown(dropdownButtonProfile, dropdownProfileDetail);
+
+// Category Filter Dropdown
+const dropdownButtonCategoryFilter = document.querySelector('#dropdown-button--category')
+toggleDropdown(dropdownButtonCategoryFilter, dropdownCategoryFilterDetail);
+
 
 // Menu Navigation
 const showNavigation = function () {
